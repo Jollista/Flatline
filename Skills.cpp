@@ -156,11 +156,11 @@ void initializeSkills()
 	technique[5] = 2;	//First Aid (TECH)
 
 	skillPoints = 60;
-	maxSkillPoints = 60;
+	maxSkillPoints = 86;
 }
 
 //Displays skills and their current totals
-void displayCategories()
+void displayCategoriesList()
 {
 	cout << "0 : AWARENESS" << endl;
 	cout << "1 : BODY" << endl;
@@ -177,7 +177,7 @@ void displayCategories()
 int promptCategory()
 {
 	int in;
-	displayCategories();
+	displayCategoriesList();
 	cout << "Category to edit (-1 to quit): ";
 	cin >> in;
 	return in;
@@ -192,18 +192,275 @@ int promptSkill()
 	return in;
 }
 
+/*
+	METHODS TO DISPLAY THE SKILLS IN A GIVEN CATEGORY
+*/
+
+//Display the skills in the awareness category
 void displayAwareness()
 {
-	cout << "0 : Concentration (WILL):\t\t" 
+	cout << "0 : *Concentration (WILL):\t\t" 
 		<< awareness[0] << endl;
 	cout << "1 : Conceal/Reveal Object (WILL):\t" 
 		<< awareness[1] << endl;
 	cout << "2 : Lip Reading (INT):\t\t\t"
 		<< awareness[2] << endl;
-	cout << "3 : Perception (INT):\t\t\t"
+	cout << "3 : *Perception (INT):\t\t\t"
 		<< awareness[3] << endl;
 	cout << "4 : Tracking (INT):\t\t\t" 
 		<< awareness[4] << endl;
+}
+
+//Display the skills in the body category
+void displayBody()
+{
+	cout << "0 : *Athletics (DEX):\t\t\t" 
+		<< body[0] << endl;
+	cout << "1 : Contortionist (DEX):\t\t" 
+		<< body[1] << endl;
+	cout << "2 : Dance (DEX):\t\t\t"
+		<< body[2] << endl;
+	cout << "3 : Endurance (WILL):\t\t\t"
+		<< body[3] << endl;
+	cout << "4 : Resist Torture/Drugs (WILL):\t" 
+		<< body[4] << endl;
+	cout << "5 : *Stealth (DEX):\t\t\t" 
+		<< body[5] << endl;
+}
+
+//Display the skills in the control category
+void displayControl()
+{
+	cout << "0 : Drive Land Vehicle (REF):\t\t" 
+		<< control[0] << endl;
+	cout << "1 : Pilot Air Vehicle (x2) (REF):\t" 
+		<< control[1] << endl;
+	cout << "2 : Pilot Sea Vehicle (REF):\t\t"
+		<< control[2] << endl;
+	cout << "3 : Riding (REF):\t\t\t"
+		<< control[3] << endl;
+}
+
+//Display the skills in the education category
+void displayEducation()
+{
+	cout << "0 : Accounting (INT):\t\t\t" 
+		<< education[0] << endl;
+	cout << "1 : Animal Handling (INT):\t\t" 
+		<< education[1] << endl;
+	cout << "2 : Bureaucracy (INT):\t\t\t"
+		<< education[2] << endl;
+	cout << "3 : Business (INT):\t\t\t"
+		<< education[3] << endl;
+	cout << "4 : Composition (INT):\t\t\t"
+		<< education[4] << endl;
+	cout << "5 : Criminology (INT):\t\t\t"
+		<< education[5] << endl;
+	cout << "6 : Cryptography (INT):\t\t\t"
+		<< education[6] << endl;
+	cout << "7 : Deduction (INT):\t\t\t"
+		<< education[7] << endl;
+	cout << "8 : *Education (INT):\t\t\t"
+		<< education[8] << endl;
+	cout << "9 : Gamble (INT):\t\t\t"
+		<< education[9] << endl;
+	cout << "10: *Language (Streetslang) (INT):\t"
+		<< education[10] << endl;
+	cout << "11: Language (Misc 1) (INT):\t\t"
+		<< education[11] << endl;
+	cout << "12: Language (Misc 2) (INT):\t\t"
+		<< education[12] << endl;
+	cout << "13: Library Search (INT):\t\t"
+		<< education[13] << endl;
+	cout << "14: *Local Expert (Your Home) (INT):\t"
+		<< education[14] << endl;
+	cout << "15: Local Expert (Misc 1) (INT):\t"
+		<< education[15] << endl;
+	cout << "16: Local Expert (Misc 2) (INT):\t"
+		<< education[16] << endl;
+	cout << "17: Science (Misc 1) (INT):\t\t"
+		<< education[17] << endl;
+	cout << "18: Science (Misc 2) (INT):\t\t"
+		<< education[18] << endl;
+	cout << "19: Tactics (INT):\t\t\t"
+		<< education[19] << endl;
+	cout << "20: Wilderness Survival (INT):\t\t"
+		<< education[20] << endl;
+}
+
+//Display the skills in the fighting category
+void displayFighting()
+{
+	cout << "0 : *Brawling (DEX):\t\t" 
+		<< fighting[0] << endl;
+	cout << "1 : *Evasion (DEX):\t\t" 
+		<< fighting[1] << endl;
+	cout << "2 : Martial Arts (x2) (DEX):\t"
+		<< fighting[2] << endl;
+	cout << "3 : Melee Weapon (DEX):\t\t"
+		<< fighting[3] << endl;
+}
+
+//Display the skills in the performance category
+void displayPerformance()
+{
+	cout << "0 : Acting (COOL):\t\t\t" 
+		<< performance[0] << endl;
+	cout << "1 : Play Instrument (Misc 1) (TECH):\t" 
+		<< performance[1] << endl;
+	cout << "2 : Play Instrument (Misc 2) (TECH):\t" 
+		<< performance[2] << endl;
+}
+
+//Display the skills in the ranged weapon category
+void displayRangedWeapon()
+{
+	cout << "0 : Archery (REF):\t\t" 
+		<< rangedWeapon[0] << endl;
+	cout << "1 : Autofire (x2) (REF):\t" 
+		<< rangedWeapon[1] << endl;
+	cout << "2 : Handgun (REF):\t\t" 
+		<< rangedWeapon[2] << endl;
+	cout << "3 : Heavy Weapons (x2) (REF):\t" 
+		<< rangedWeapon[3] << endl;
+	cout << "4 : Shoulder Arms (REF):\t" 
+		<< rangedWeapon[4] << endl;
+}
+
+//Display the skills in the social category
+void displaySocial()
+{
+	cout << "0 : Bribery (COOL):\t\t" 
+		<< social[0] << endl;
+	cout << "1 : *Conversation (EMP):\t" 
+		<< social[1] << endl;
+	cout << "2 : *Human Perception (EMP):\t" 
+		<< social[2] << endl;
+	cout << "3 : Interrogation (COOL):\t" 
+		<< social[3] << endl;
+	cout << "4 : *Persuasion (COOL):\t\t" 
+		<< social[4] << endl;
+	cout << "5 : Personal Grooming (COOL):\t" 
+		<< social[5] << endl;
+	cout << "6 : Streetwise (COOL):\t\t" 
+		<< social[6] << endl;
+	cout << "7 : Trading (COOL):\t\t" 
+		<< social[7] << endl;
+	cout << "8 : Wardrobe & Style (COOL):\t" 
+		<< social[8] << endl;
+}
+
+//Display the skills in the technique category
+void displayTechnique()
+{
+	cout << "0 : Air Vehicle Tech (TECH):\t\t\t" 
+		<< technique[0] << endl;
+	cout << "1 : Basic Tech (TECH):\t\t\t\t" 
+		<< technique[1] << endl;
+	cout << "2 : Cybertech (TECH):\t\t\t\t" 
+		<< technique[2] << endl;
+	cout << "3 : Demolitions (x2) (TECH):\t\t\t" 
+		<< technique[3] << endl;
+	cout << "4 : Electronics/Security Tech (x2) (TECH):\t" 
+		<< technique[4] << endl;
+	cout << "5 : *First Aid (TECH):\t\t\t\t" 
+		<< technique[5] << endl;
+	cout << "6 : Forgery (TECH):\t\t\t\t" 
+		<< technique[6] << endl;
+	cout << "7 : Land Vehicle Tech (TECH):\t\t\t" 
+		<< technique[7] << endl;
+	cout << "8 : Paint/Draw/Sculpt (TECH):\t\t\t" 
+		<< technique[8] << endl;
+	cout << "9 : Paramedic (x2) (TECH):\t\t\t" 
+		<< technique[9] << endl;
+	cout << "10: Photography/Film (TECH):\t\t\t" 
+		<< technique[10] << endl;
+	cout << "11: Pick Lock (TECH):\t\t\t\t" 
+		<< technique[11] << endl;
+	cout << "12: Pick Pocket (TECH):\t\t\t\t" 
+		<< technique[12] << endl;
+	cout << "13: Sea Vehicle Tech (TECH):\t\t\t" 
+		<< technique[13] << endl;
+	cout << "14: Weaponstech (TECH):\t\t\t\t" 
+		<< technique[14] << endl;
+}
+
+//Display all categories and skills
+void displayAll()
+{
+	cout << "\t -----\tAWARENESS\t-----\n";
+	displayAwareness();
+	cout << endl << endl;
+
+	cout << "\t -----\tBODY\t\t-----\n";
+	displayBody();
+	cout << endl << endl;
+
+	cout << "\t -----\tCONTROL\t-----\n";
+	displayControl();
+	cout << endl << endl;
+
+	cout << "\t -----\tEDUCATION\t-----\n";
+	displayEducation();
+	cout << endl << endl;
+
+	cout << "\t -----\tFIGHTING\t-----\n";
+	displayFighting();
+	cout << endl << endl;
+
+	cout << "\t -----\tPERFORMANCE\t-----\n";
+	displayPerformance();
+	cout << endl << endl;
+
+	cout << "\t -----\tRANGED WEAPON\t-----\n";
+	displayRangedWeapon();
+	cout << endl << endl;
+
+	cout << "\t -----\tSOCIAL\t-----\n";
+	displaySocial();
+	cout << endl << endl;
+
+	cout << "\t -----\tTECHNIQUE\t-----\n";
+	displayTechnique();
+	cout << endl << endl;
+
+	cout << "Skill Points Used:\t" << maxSkillPoints-skillPoints << "/" << maxSkillPoints
+		<< endl << endl;
+}
+
+//Call the relevant function to display a given category
+void displayCategory(int category)
+{
+	switch (category)
+	{
+	case 0:
+		displayAwareness();
+		break;
+	case 1:
+		displayBody();
+		break;
+	case 2:
+		displayControl();
+		break;
+	case 3:
+		displayEducation();
+		break;
+	case 4:
+		displayFighting();
+		break;
+	case 5:
+		displayPerformance();
+		break;
+	case 6:
+		displayRangedWeapon();
+		break;
+	case 7:
+		displaySocial();
+		break;
+	case 8:
+		displayTechnique();
+		break;
+	}
 }
 
 //returns true if a given skill in a given category is required (min 2)
@@ -233,6 +490,51 @@ bool isRequiredSkill(int category, int skill)
 	return false;
 }
 
+//Display the menu for a category, given the category and its skill array
+int categoryMenu(int skills[], int category)
+{
+	int input, rank;
+
+	while(input != -1)
+	{
+		//display category skills
+		displayCategory(category);
+
+		//prompt for skill to edit
+		input = promptSkill();
+		if (input < -1 || input >= sizeof(skills)/sizeof(skills[0])) //OOB
+		{
+			cout << "input: " << input << endl << "sizeof(awareness): " << sizeof(skills) << endl;
+			cout << "INVALID INPUT" << endl;
+		}
+		else
+		{
+			//prompt for rank to set skill to
+			cout << "Set Skill #" << input << " to: ";
+			cin >> rank;
+
+			//set floor to 0 (or 2 if required)
+			if (isRequiredSkill(0, input))
+			{
+				rank = max(2, rank);
+			}
+			else
+			{
+				rank = max(0, rank);
+			}
+
+			//rank is the increase or decrease from current skill rank
+			rank = rank-skills[input];
+			//update skill points
+			skillPoints -= rank;
+			//set skill
+			skills[input] += rank;
+		}
+	}
+	return input;
+}
+
+//functional but not used currently --holding onto it just in case
 int awarenessMenu()
 {
 	//edit awareness[]
@@ -276,62 +578,6 @@ int awarenessMenu()
 	return input;
 }
 
-int bodyMenu()
-{
-	//display body skills
-	//edit body[]
-	return 0;
-}
-
-int controlMenu()
-{
-	//display control skills
-	//edit control[]
-	return 0;
-}
-
-int educationMenu()
-{
-	//display education skills
-	//edit education[]
-	return 0;
-}
-
-int fightingMenu()
-{
-	//display fighting skills
-	//edit fighting[]
-	return 0;
-}
-
-int performanceMenu()
-{
-	//display performance skills
-	//edit performance[]
-	return 0;
-}
-
-int rangedWeaponMenu()
-{
-	//display ranged weapon skills
-	//edit rangedWeapon[]
-	return 0;
-}
-
-int socialMenu()
-{
-	//display social skills
-	//edit social[]
-	return 0;
-}
-
-int techniqueMenu()
-{
-	//display technique skills
-	//edit technique[]
-	return 0;
-}
-
 //determine which array to modify based on input
 void categoryMenu(int input)
 {
@@ -341,31 +587,31 @@ void categoryMenu(int input)
 		switch (in)
 		{
 		case 0: //AWARENESS
-			in = awarenessMenu();
+			in = categoryMenu(awareness, in);
 			break;
 		case 1: //BODY
-			in = bodyMenu();
+			in = categoryMenu(body, in);
 			break;
 		case 2: //CONTROL
-			in = controlMenu();
+			in = categoryMenu(control, in);
 			break;
 		case 3: //EDUCATION
-			in = educationMenu();
+			in = categoryMenu(education, in);
 			break;
 		case 4: //FIGHTING
-			in = fightingMenu();
+			in = categoryMenu(fighting, in);
 			break;
 		case 5: //PERFORMANCE
-			in = performanceMenu();
+			in = categoryMenu(performance, in);
 			break;
 		case 6: //RANGED WEAPON
-			in = rangedWeaponMenu();
+			in = categoryMenu(rangedWeapon, in);
 			break;
 		case 7: //SOCIAL
-			in = socialMenu();
+			in = categoryMenu(social, in);
 			break;
 		case 8: //TECHNIQUE
-			in = techniqueMenu();
+			in = categoryMenu(technique, in);
 			break;
 		}
 	}
@@ -383,4 +629,6 @@ int main()
 		input = promptCategory();
 		categoryMenu(input);
 	}
+
+	displayAll();
 }
