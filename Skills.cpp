@@ -127,10 +127,37 @@ TECHNIQUE SKILLS
        14 - Weaponstech (TECH)
 */
 
+void promptMaxSkillPoints()
+{
+	//set maxSkillPoints to invalid value
+	maxSkillPoints = -2;
+	while (maxSkillPoints == -2) //while maxSkillPoints is invalid
+	{
+		//prompt
+		cout << "\nMax Number of Skill Points (86 is recommended; -1 to select default): ";
+		cin >> maxSkillPoints;
+
+		//if invalid input, display error message, confirm invalid value
+		if (maxSkillPoints != -1 && maxSkillPoints < 26)
+		{
+			cout << "Must be at least 26 to set required skills to minimum.\n";
+			maxSkillPoints = -2;
+		}
+	}
+
+	//if -1, set to default (86)
+	if (maxSkillPoints == -1)
+	{
+		maxSkillPoints = 86;
+	}
+}
+
 //Set required skills to 2
 //Initialize skill points (default 60)
 void initializeSkills()
 {
+	promptMaxSkillPoints();
+
 	//Required Awareness Skills
 	awareness[0] = 2;	//Concentration (WILL)
 	awareness[3] = 2;	//Perception (INT)
@@ -156,8 +183,7 @@ void initializeSkills()
 	//Required Technique Skills
 	technique[5] = 2;	//First Aid (TECH)
 
-	skillPoints = 60;
-	maxSkillPoints = 86;
+	skillPoints = maxSkillPoints-26;
 }
 
 //Displays skills and their current totals
@@ -503,7 +529,7 @@ int categoryMenu(int skills[], int category)
 
 		//prompt for skill to edit
 		input = promptSkill();
-		
+
 		if (input == -1)
 		{
 			return -1;
