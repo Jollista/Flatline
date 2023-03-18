@@ -631,4 +631,5 @@ int main()
 	}
 
 	displayAll();
+	cin >> input;
 }
