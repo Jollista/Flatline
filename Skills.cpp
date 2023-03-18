@@ -503,7 +503,12 @@ int categoryMenu(int skills[], int category)
 
 		//prompt for skill to edit
 		input = promptSkill();
-		if (input < -1 || input >= (&skills)[1] - skills) //OOB
+		
+		if (input == -1)
+		{
+			return -1;
+		}
+		else if (input < -1 || input >= (&skills)[1] - skills) //OOB
 		{
 			cout << "input: " << input << endl << "(&skills)[1] - skills: " << (&skills)[1]-skills << endl;
 			cout << "INVALID INPUT" << endl;
