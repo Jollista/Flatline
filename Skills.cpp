@@ -494,7 +494,7 @@ void displayCategory(int category)
 bool isRequiredSkill(int category, int skill)
 {
 	switch (category)
-		{
+	{
 		case 0: //AWARENESS
 			return (skill == 0 || skill == 3);
 		case 1: //BODY
@@ -513,7 +513,33 @@ bool isRequiredSkill(int category, int skill)
 			return (skill == 1 || skill == 2 || skill == 4);
 		case 8: //TECHNIQUE
 			return (skill == 5);
-		}
+	}
+	return false;
+}
+
+bool isComplexSkill(int category, int skill)
+{
+	switch (category)
+	{
+		case 0: //AWARENESS
+			return false;
+		case 1: //BODY
+			return false;
+		case 2: //CONTROL
+			return (skill == 1);
+		case 3: //EDUCATION
+			return false;
+		case 4: //FIGHTING
+			return (skill == 2);
+		case 5: //PERFORMANCE
+			return false;
+		case 6: //RANGED WEAPON
+			return (skill == 1 || skill == 3);
+		case 7: //SOCIAL
+			return false;
+		case 8: //TECHNIQUE
+			return (skill == 3 || skill == 4 || skill == 9);
+	}
 	return false;
 }
 
@@ -546,7 +572,7 @@ int categoryMenu(int skills[], int category)
 			cin >> rank;
 
 			//set floor to 0 (or 2 if required)
-			if (isRequiredSkill(0, input))
+			if (isRequiredSkill(category, input))
 			{
 				rank = min(max(2, rank), 8);
 			}
@@ -555,12 +581,25 @@ int categoryMenu(int skills[], int category)
 				rank = min(max(0, rank), 8);
 			}
 
-			//rank is the increase or decrease from current skill rank
-			rank = rank-skills[input];
-			//update skill points
-			skillPoints -= rank;
-			//set skill
-			skills[input] += rank;
+			//increase rank by rank/2 if complex, else by rank
+			if (isComplexSkill(category, input))
+			{
+				//rank is HALF the increase or decrease from current skill rank
+				rank = rank-skills[input];
+				//update skill points
+				skillPoints -= rank*2;
+				//set skill
+				skills[input] += rank;
+			}
+			else
+			{
+				//rank is the increase or decrease from current skill rank
+				rank = rank-skills[input];
+				//update skill points
+				skillPoints -= rank;
+				//set skill
+				skills[input] += rank;
+			}
 		}
 	}
 	return input;
