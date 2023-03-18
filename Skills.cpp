@@ -516,11 +516,11 @@ int categoryMenu(int skills[], int category)
 			//set floor to 0 (or 2 if required)
 			if (isRequiredSkill(0, input))
 			{
-				rank = max(2, rank);
+				rank = min(max(2, rank), 8);
 			}
 			else
 			{
-				rank = max(0, rank);
+				rank = min(max(0, rank), 8);
 			}
 
 			//rank is the increase or decrease from current skill rank
@@ -631,5 +631,6 @@ int main()
 	}
 
 	displayAll();
+	cout << "Skills displayed. Input any integer and return to quit. Progress will be lost." << endl;
 	cin >> input;
 }
