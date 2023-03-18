@@ -544,7 +544,7 @@ bool isComplexSkill(int category, int skill)
 }
 
 //Display the menu for a category, given the category and its skill array
-int categoryMenu(int skills[], int category)
+int categoryMenu(int skills[], int numSkills, int category)
 {
 	int input, rank;
 
@@ -560,8 +560,10 @@ int categoryMenu(int skills[], int category)
 		{
 			return -1;
 		}
-		else if (input < -1 || input >= (&skills)[1] - skills) //OOB
+		else if (input < -1 || input >= numSkills) //OOB
 		{
+			cout << "&skills[1]: " << (&skills)[1] << endl;
+			cout << "skills: " << skills << endl;
 			cout << "input: " << input << endl << "(&skills)[1] - skills: " << (&skills)[1]-skills << endl;
 			cout << "INVALID INPUT" << endl;
 		}
@@ -614,31 +616,31 @@ void categoryMenu(int input)
 		switch (in)
 		{
 		case 0: //AWARENESS
-			in = categoryMenu(awareness, in);
+			in = categoryMenu(awareness, 5, in);
 			break;
 		case 1: //BODY
-			in = categoryMenu(body, in);
+			in = categoryMenu(body, 6, in);
 			break;
 		case 2: //CONTROL
-			in = categoryMenu(control, in);
+			in = categoryMenu(control, 4, in);
 			break;
 		case 3: //EDUCATION
-			in = categoryMenu(education, in);
+			in = categoryMenu(education, 21, in);
 			break;
 		case 4: //FIGHTING
-			in = categoryMenu(fighting, in);
+			in = categoryMenu(fighting, 4, in);
 			break;
 		case 5: //PERFORMANCE
-			in = categoryMenu(performance, in);
+			in = categoryMenu(performance, 3, in);
 			break;
 		case 6: //RANGED WEAPON
-			in = categoryMenu(rangedWeapon, in);
+			in = categoryMenu(rangedWeapon, 5, in);
 			break;
 		case 7: //SOCIAL
-			in = categoryMenu(social, in);
+			in = categoryMenu(social, 9, in);
 			break;
 		case 8: //TECHNIQUE
-			in = categoryMenu(technique, in);
+			in = categoryMenu(technique, 15, in);
 			break;
 		}
 	}
