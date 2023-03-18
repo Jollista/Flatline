@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <string>
 #include <time.h>
+
 using namespace std;
 
 //current total of Skill Points
@@ -502,9 +503,9 @@ int categoryMenu(int skills[], int category)
 
 		//prompt for skill to edit
 		input = promptSkill();
-		if (input < -1 || input >= sizeof(skills)/sizeof(skills[0])) //OOB
+		if (input < -1 || input >= (&skills)[1] - skills) //OOB
 		{
-			cout << "input: " << input << endl << "sizeof(awareness): " << sizeof(skills) << endl;
+			cout << "input: " << input << endl << "(&skills)[1] - skills: " << (&skills)[1]-skills << endl;
 			cout << "INVALID INPUT" << endl;
 		}
 		else
@@ -529,50 +530,6 @@ int categoryMenu(int skills[], int category)
 			skillPoints -= rank;
 			//set skill
 			skills[input] += rank;
-		}
-	}
-	return input;
-}
-
-//functional but not used currently --holding onto it just in case
-int awarenessMenu()
-{
-	//edit awareness[]
-	int input, rank;
-	while(input != -1)
-	{
-		//display awareness skills
-		displayAwareness();
-		
-		//prompt for skill to edit
-		input = promptSkill();
-		if (input < -1 || input >= end(awareness)-begin(awareness)) //OOB
-		{
-			cout << "input: " << input << endl << "sizeof(awareness): " << sizeof(awareness) << endl;
-			cout << "INVALID INPUT" << endl;
-		}
-		else
-		{
-			//prompt for rank to set skill to
-			cout << "Set awareness Skill #" << input << " to: ";
-			cin >> rank;
-
-			//set floor to 0 (or 2 if required)
-			if (isRequiredSkill(0, input))
-			{
-				rank = max(2, rank);
-			}
-			else
-			{
-				rank = max(0, rank);
-			}
-
-			//rank is the increase or decrease from current skill rank
-			rank = rank-awareness[input];
-			//update skill points
-			skillPoints -= rank;
-			//set skill
-			awareness[input] += rank;
 		}
 	}
 	return input;
