@@ -11,12 +11,24 @@
 	<body>
 		<!--div content changed on button press-->
 		<div id="content">
-			<header>
+			<header id="head">
 				<img src="images/logo.jpg" alt="Cyberpunk RED" height="350px" class="center">
 			</header>
 
 			<h1>COMPLETE</h1>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, officia vero. Provident amet ab incidunt modi voluptate! Necessitatibus excepturi earum magni esse libero soluta exercitationem, nobis deleniti inventore distinctio repudiandae?</p>
+
+			<h2>CHOOSE YOUR ROLE</h2>
+			<div class="dropdown">
+				<button id="roleButton">ROLE</button>
+				<div class="dropdown-content">
+					<a onclick="selectRole('Netrunner')">Netrunner</a>
+					<a onclick="selectRole('Rockerboy')">Rockerboy</a>
+					<a onclick="selectRole('Solo')">Solo</a>
+				</div>
+			</div>
+
+			
 		</div>
 		<script src="script.js"></script>
 	</body>
