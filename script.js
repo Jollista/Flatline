@@ -19,5 +19,4 @@ function completeChargen()
 {
 	//idk, figure out how to change the page to 
 	document.getElementById("demo").innerHTML = "COMPLETE PACKAGES";
-	
 }
