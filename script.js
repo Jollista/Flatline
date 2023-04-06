@@ -1,3 +1,6 @@
+//default header image
+var defImage
+
 //Player's starting role
 var myRole;
 
@@ -42,12 +45,20 @@ skills.set('First Aid (TECH)', 2);
 	STEP 1: SELECT A ROLE
 */
 
+//Load an image to header-image
+function loadImage(image=defImage)
+{
+	var headerImage = document.getElementById("header-image");
+	headerImage.setAttribute('src', image);
+}
+
 //Select a role
 function selectRole(role)
 {
 	var k = document.getElementById("roleButton");
 	k.innerText = role;
 	myRole = role;
+	defImage = document.getElementById("header-image").getAttribute('src');
 }
 
 /*
