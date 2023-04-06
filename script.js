@@ -1,5 +1,5 @@
 //default header image
-var defImage
+var defImage=document.getElementById("header-image").getAttribute('src');
 
 //Player's starting role
 var myRole;
