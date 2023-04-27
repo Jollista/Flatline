@@ -55,9 +55,14 @@ function loadImage(image=defImage)
 //Select a role
 function selectRole(role)
 {
+	//set button text to role
 	var k = document.getElementById("roleButton");
 	k.innerText = role;
+
+	//update myRole to role
 	myRole = role;
+
+	//set image to role's image
 	defImage = document.getElementById("header-image").getAttribute('src');
 }
 
@@ -69,28 +74,54 @@ function selectRole(role)
 //	input - string statName
 function incrementStat(statName) 
 {
+	//get current stat rank
 	var rank = stats.get(statName);
-	if (rank == 8)
+
+	//if cannot increment, print error and return
+	if (rank == 8 || remStatPoints <= 0)
 	{
-		console.log("STATS cannot be higher than 8");
+		console.log("STATS cannot be higher than 8 or exceeding remaining stat points");
 		return;
 	}
 
+	//update stat rank to rank+1
 	stats.set(statName, rank+1);
+	//update point tracker
+	remStatPoints--;
+
+	//update stat point display
+	var k = document.getElementById("statPointDisplay");
+	k.innerText = "Points: " + remStatPoints + "/"+maxStatPoints;
+	//update stat specific display
+	k = document.getElementById(statName.toLowerCase()+"Total");
+	k.innerText = rank+1;
 }
 
 //decrease the rank of a stat by 1
 //	input - string statName
 function decrementStat(statName) 
 {
+	//get current stat rank
 	var rank = stats.get(statName);
+
+	//if cannot decrement, print error and return
 	if (rank == 2)
 	{
 		console.log("STATS cannot be lower than 2");
 		return;
 	}
 
+	//update stat rank to rank-1
 	stats.set(statName, rank-1);
+	//update point tracker
+	remStatPoints++;
+
+	//update display
+	var k = document.getElementById("statPointDisplay");
+	k.innerText = "Points: " + remStatPoints + "/"+maxStatPoints;
+	//update stat specific display
+	k = document.getElementById(statName.toLowerCase()+"Total");
+	k.innerText = rank-1;
 }
 
 /*
