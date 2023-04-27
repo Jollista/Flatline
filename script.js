@@ -22,6 +22,9 @@ stats.set('LUCK', 2);
 stats.set('MOVE', 2);
 stats.set('BODY', 2);
 stats.set('EMP', 2);
+//Derived stats
+stats.set('HP', 20);
+stats.set('HUM', 20);
 
 //Map of skills (names, rank)
 const skills = new Map();
