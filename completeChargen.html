@@ -501,7 +501,7 @@
 				</tr>
 				<tr>
 					<td>INT</td>
-					<td id="intTotal">2</td>
+					<td name="intTotal">2</td>
 					<td>
 						<button onclick="incrementStat('INT')">+</button>
 					</td>
@@ -511,7 +511,7 @@
 				</tr>
 				<tr>
 					<td>REF</td>
-					<td id="refTotal">2</td>
+					<td name="refTotal">2</td>
 					<td>
 						<button onclick="incrementStat('REF')">+</button>
 					</td>
@@ -521,7 +521,7 @@
 				</tr>
 				<tr>
 					<td>DEX</td>
-					<td id="dexTotal">2</td>
+					<td name="dexTotal">2</td>
 					<td>
 						<button onclick="incrementStat('DEX')">+</button>
 					</td>
@@ -531,7 +531,7 @@
 				</tr>
 				<tr>
 					<td>TECH</td>
-					<td id="techTotal">2</td>
+					<td name="techTotal">2</td>
 					<td>
 						<button onclick="incrementStat('TECH')">+</button>
 					</td>
@@ -541,7 +541,7 @@
 				</tr>
 				<tr>
 					<td>COOL</td>
-					<td id="coolTotal">2</td>
+					<td name="coolTotal">2</td>
 					<td>
 						<button onclick="incrementStat('COOL')">+</button>
 					</td>
@@ -551,7 +551,7 @@
 				</tr>
 				<tr>
 					<td>WILL</td>
-					<td id="willTotal">2</td>
+					<td name="willTotal">2</td>
 					<td>
 						<button onclick="incrementStat('WILL')">+</button>
 					</td>
@@ -561,7 +561,7 @@
 				</tr>
 				<tr>
 					<td>LUCK</td>
-					<td id="luckTotal">2</td>
+					<td name="luckTotal">2</td>
 					<td>
 						<button onclick="incrementStat('LUCK')">+</button>
 					</td>
@@ -571,7 +571,7 @@
 				</tr>
 				<tr>
 					<td>MOVE</td>
-					<td id="moveTotal">2</td>
+					<td name="moveTotal">2</td>
 					<td>
 						<button onclick="incrementStat('MOVE')">+</button>
 					</td>
@@ -581,7 +581,7 @@
 				</tr>
 				<tr>
 					<td>BODY</td>
-					<td id="bodyTotal">2</td>
+					<td name="bodyTotal">2</td>
 					<td>
 						<button onclick="incrementStat('BODY')">+</button>
 					</td>
@@ -591,7 +591,7 @@
 				</tr>
 				<tr>
 					<td>EMP</td>
-					<td id="empTotal">2</td>
+					<td name="empTotal">2</td>
 					<td>
 						<button onclick="incrementStat('EMP')">+</button>
 					</td>
@@ -603,6 +603,53 @@
 
 			<!--SKILLS-->
 			<h2>SET YOUR SKILLS</h2>
+			<h3 id="skillPointDisplay">Points: 60/86</h3>
+			<table>
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<th>Awareness Skills</th>
+								<th>LVL</th>
+								<th>+</th>
+								<th>-</th>
+								<th>STAT</th>
+								<th>BASE</th>
+							</tr>
+							<tr>
+								<td><b>Concentration (WILL)</b></td>
+								<td>2</td>
+								<td>
+									<button onclick="incrementSkill('Concentration (WILL)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Concentration (WILL)')">-</button>
+								</td>
+								<td name="willTotal">2</td>
+								<td id="concentrationBase">4</td>
+							</tr>
+						</table>
+					</td>
+
+					<td>
+						<table>
+							<tr>
+								<td>hi</td>
+								<td>hi</td>
+							</tr>
+						</table>
+					</td>
+
+					<td>
+						<table>
+							<tr>
+								<td>hi</td>
+								<td>hi</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
 
 			<!--BUY STUFF-->
 			<h2>BUY YOUR STUFF</h2>

@@ -13,6 +13,23 @@ h1 {
 	color: #ff3f20;
 }
 
+table {
+	border: 1px solid #ff3f20;
+}
+
+td {
+	background-color: white;
+	color: black;
+	border: 1px solid #ff3f20;
+	padding: 8px;
+}
+
+th {
+	background-color: black;
+	color:white;
+	border: 1px solid #ff3f20;
+}
+
 button {
 	position: relative;
 	margin-left: 25%;
