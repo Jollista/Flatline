@@ -99,11 +99,14 @@ function incrementStat(statName)
 	var k = document.getElementById("statPointDisplay");
 	k.innerText = "Points: " + remStatPoints + "/"+maxStatPoints;
 	//update stat specific display
-	//k = document.getElementById(statName.toLowerCase()+"Total");
+	//update stat totals
 	document.getElementsByName(statName.toLowerCase()+"Total").forEach(function(ele, idx) {
 		ele.textContent = rank+1;
 	});
-	//k.innerText = rank+1;
+	//update relevant skill bases
+	document.getElementsByName(statName.toLowerCase()+"Base").forEach(function(ele, idx) {
+		ele.textContent -= -1;
+	});
 }
 
 //decrease the rank of a stat by 1
@@ -129,8 +132,13 @@ function decrementStat(statName)
 	var k = document.getElementById("statPointDisplay");
 	k.innerText = "Points: " + remStatPoints + "/"+maxStatPoints;
 	//update stat specific display in both stats and skills
+	//update stat totals
 	document.getElementsByName(statName.toLowerCase()+"Total").forEach(function(ele, idx) {
 		ele.textContent = rank-1;
+	});
+	//update relevant skill bases
+	document.getElementsByName(statName.toLowerCase()+"Base").forEach(function(ele, idx) {
+		ele.textContent -= 1;
 	});
 }
 
