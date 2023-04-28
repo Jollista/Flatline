@@ -150,6 +150,23 @@ function decrementStat(statName)
 //	input - string skillName
 function incrementSkill(skillName)
 {
+	//initialize skill to 0 if it doesn't exist already
+	if (!skills.has(skillName))
+	{
+		skills.set(skillName, 0);
+	}
+
+	//check for difficult skills and track remSkillPoints accordingly
+	var difficulty = 1;
+	var nameMinusDifficulty = skillName;
+	if (skillName.includes("(x2)"))
+	{
+
+		difficulty = 2;
+		// cut out (x2)
+		nameMinusDifficulty = skillName.replace(" (x2)", "");
+	}
+
 	//get skill rank
 	var rank = skills.get(skillName);
 
@@ -163,11 +180,11 @@ function incrementSkill(skillName)
 	//else, increment skill
 	skills.set(skillName, rank+1);
 	//update point tracker
-	remSkillPoints--;
+	remSkillPoints -= 1 * difficulty;
 
 	//update display
 	document.getElementById("skillPointDisplay").innerText = "Points: " + remSkillPoints + "/"+maxSkillPoints; //update point total display
-	var stat = skillName.substring(skillName.indexOf("(")+1, skillName.indexOf(")")); //get name of stat
+	var stat = nameMinusDifficulty.substring(nameMinusDifficulty.indexOf("(")+1, nameMinusDifficulty.indexOf(")")); //get name of stat
 	document.getElementById(skillName + " Rank").innerText=rank+1; //update displayed rank
 	document.getElementById(skillName + " Base").innerText=rank+1+stats.get(stat); //update displayed base (level + stat)
 }
@@ -186,14 +203,25 @@ function decrementSkill(skillName)
 		return;
 	}
 
+	//check for difficult skills and track remSkillPoints accordingly
+	var difficulty = 1;
+	var nameMinusDifficulty = skillName;
+	if (skillName.includes("(x2)"))
+	{
+
+		difficulty = 2;
+		// cut out (x2)
+		nameMinusDifficulty = skillName.replace(" (x2)", "");
+	}
+
 	//else, increment skill
 	skills.set(skillName, rank-1)
 	//update point tracker
-	remSkillPoints++;
+	remSkillPoints += 1 * difficulty;
 
 	//update display
 	document.getElementById("skillPointDisplay").innerText = "Points: " + remSkillPoints + "/"+maxSkillPoints; //update point total display
-	var stat = skillName.substring(skillName.indexOf("(")+1, skillName.indexOf(")")); //get name of stat
+	var stat = nameMinusDifficulty.substring(nameMinusDifficulty.indexOf("(")+1, nameMinusDifficulty.indexOf(")")); //get name of stat
 	document.getElementById(skillName + " Rank").innerText=rank-1; //update displayed rank
 	document.getElementById(skillName + " Base").innerText=rank-1+stats.get(stat); //update displayed base (level + stat)
 

@@ -14,20 +14,22 @@ h1 {
 }
 
 table {
-	border: 1px solid #ff3f20;
+	border: 3px solid #ff3f20;
+	border-collapse: collapse;
 }
 
 td {
 	background-color: white;
 	color: black;
-	border: 1px solid #ff3f20;
+	border: 3px solid #ff3f20;
+	border-collapse: collapse;
 	padding: 8px;
 }
 
 th {
 	background-color: black;
 	color:white;
-	border: 1px solid #ff3f20;
+	border: 1px solid black;
 }
 
 button {
