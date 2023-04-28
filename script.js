@@ -44,6 +44,9 @@ skills.set('Human Perception (EMP)', 2);
 skills.set('Persuasion (COOL)', 2);
 skills.set('First Aid (TECH)', 2);
 
+var maxSkillPoints = 86;
+var remSkillPoints = 60;
+
 /*
 	STEP 1: SELECT A ROLE
 */
@@ -143,14 +146,22 @@ function incrementSkill(skillName)
 	var rank = skills.get(skillName);
 
 	//if incrementing past ceiling
-	if (rank == 6)
+	if (rank == 6 || remSkillPoints <= 0)
 	{
 		console.log("Skill cannot go higher than 6");
 		return;
 	}
 
 	//else, increment skill
-	skills.set(skillName, rank+1)
+	skills.set(skillName, rank+1);
+	//update point tracker
+	remSkillPoints--;
+
+	//update display
+	document.getElementById("skillPointDisplay").innerText = "Points: " + remSkillPoints + "/"+maxSkillPoints; //update point total display
+	var stat = skillName.substring(skillName.indexOf("(")+1, skillName.indexOf(")")); //get name of stat
+	document.getElementById(skillName + " Rank").innerText=rank+1; //update displayed rank
+	document.getElementById(skillName + " Base").innerText=rank+1+stats.get(stat); //update displayed base (level + stat)
 }
 
 //Decrease a skill's rank by 1
@@ -169,6 +180,15 @@ function decrementSkill(skillName)
 
 	//else, increment skill
 	skills.set(skillName, rank-1)
+	//update point tracker
+	remSkillPoints++;
+
+	//update display
+	document.getElementById("skillPointDisplay").innerText = "Points: " + remSkillPoints + "/"+maxSkillPoints; //update point total display
+	var stat = skillName.substring(skillName.indexOf("(")+1, skillName.indexOf(")")); //get name of stat
+	document.getElementById(skillName + " Rank").innerText=rank-1; //update displayed rank
+	document.getElementById(skillName + " Base").innerText=rank-1+stats.get(stat); //update displayed base (level + stat)
+
 }
 
 //Returns true if given skill name is a required skill
