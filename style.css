@@ -112,3 +112,8 @@ button:hover {
 }
 
 .dropdown-content a:hover .dropdown-content-desc {display:inline-block;}
+
+.horizontal {
+	display:inline-block;
+	padding:20px;
+}
