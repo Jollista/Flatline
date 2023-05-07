@@ -607,6 +607,7 @@
 			<table>
 				<tr>
 					<td>
+						<!--SKILLS COLUMN 1-->
 						<table>
 							<!--AWARENESS SKILLS-->
 							<tr>
@@ -618,7 +619,7 @@
 								<th>BASE</th>
 							</tr>
 							<tr>
-								<td><b>Concentration (WILL)</b></td>
+								<td><b>CONCENTRATION (WILL)</b></td>
 								<td>
 									<button onclick="incrementSkill('Concentration (WILL)')">+</button>
 								</td>
@@ -657,7 +658,7 @@
 								<td id="Lip Reading (INT) Base" name="intBase">2</td>
 							</tr>
 							<tr>
-								<td><b>Perception (INT)</b></td>
+								<td><b>PERCEPTION (INT)</b></td>
 								<td>
 									<button onclick="incrementSkill('Perception (INT)')">+</button>
 								</td>
@@ -693,7 +694,7 @@
 								<th>BASE</th>
 							</tr>
 							<tr>
-								<td><b>Athletics (DEX)</b></td>
+								<td><b>ATHLETICS (DEX)</b></td>
 								<td>
 									<button onclick="incrementSkill('Athletics (DEX)')">+</button>
 								</td>
@@ -758,7 +759,7 @@
 								<td id="Resist Torture/Drugs (WILL) Base" name="willBase">2</td>
 							</tr>
 							<tr>
-								<td><b>Stealth (DEX)</b></td>
+								<td><b>STEALTH (DEX)</b></td>
 								<td>
 									<button onclick="incrementSkill('Stealth (DEX)')">+</button>
 								</td>
@@ -976,6 +977,7 @@
 					</td>
 
 					<td>
+						<!--SKILLS COLUMN 2-->
 						<table>
 							<!--EDUCATION SKILLS-->
 							<tr>
@@ -987,17 +989,156 @@
 								<th>BASE</th>
 							</tr>
 							<tr>
-								<td>Gamble <b>(INT)</b></td>
+								<td>Language <b>(INT)</b></td>
+							</tr>
+							<tr>
+								<td>- - > <b>STREETSLANG</b></td>
 								<td>
-									<button onclick="incrementSkill('Gamble (INT)')">+</button>
+									<button onclick="incrementSkill('Streetslang (INT)')">+</button>
 								</td>
 								<td>
-									<button onclick="decrementSkill('Gamble (INT)')">-</button>
+									<button onclick="decrementSkill('Streetslang (INT)')">-</button>
 								</td>
 								
-								<td id="Gamble (INT) Rank">0</td>
+								<td id="Streetslang (INT) Rank">2</td>
 								<td name="intTotal">2</td>
-								<td id="Gamble (INT) Base" name="intBase">2</td>
+								<td id="Streetslang (INT) Base" name="intBase">4</td>
+							</tr>
+							<tr>
+								<td>- - > Language 1</td>
+								<td>
+									<button onclick="incrementSkill('Language 1 (INT)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Language 1 (INT)')">-</button>
+								</td>
+								
+								<td id="Language 1 (INT) Rank">0</td>
+								<td name="intTotal">2</td>
+								<td id="Language 1 (INT) Base" name="intBase">2</td>
+							</tr>
+							<tr>
+								<td>- - > Language 2</td>
+								<td>
+									<button onclick="incrementSkill('Language 2 (INT)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Language 2 (INT)')">-</button>
+								</td>
+								
+								<td id="Language 2 (INT) Rank">0</td>
+								<td name="intTotal">2</td>
+								<td id="Language 2 (INT) Base" name="intBase">2</td>
+							</tr>
+							<tr>
+								<td>Library Search <b>(INT)</b></td>
+								<td>
+									<button onclick="incrementSkill('Library Search (INT)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Library Search (INT)')">-</button>
+								</td>
+								
+								<td id="Library Search (INT) Rank">0</td>
+								<td name="intTotal">2</td>
+								<td id="Library Search (INT) Base" name="intBase">2</td>
+							</tr>
+							<tr>
+								<td>Local Expert <b>(INT)</b></td>
+							</tr>
+							<tr>
+								<td>- - > <b>YOUR HOME</b></td>
+								<td>
+									<button onclick="incrementSkill('Your Home (INT)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Your Home (INT)')">-</button>
+								</td>
+								
+								<td id="Your Home (INT) Rank">2</td>
+								<td name="intTotal">2</td>
+								<td id="Your Home (INT) Base" name="intBase">4</td>
+							</tr>
+							<tr>
+								<td>- - > Location 1</td>
+								<td>
+									<button onclick="incrementSkill('Location 1 (INT)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Location 1 (INT)')">-</button>
+								</td>
+								
+								<td id="Location 1 (INT) Rank">0</td>
+								<td name="intTotal">2</td>
+								<td id="Location 1 (INT) Base" name="intBase">2</td>
+							</tr>
+							<tr>
+								<td>- - > Location 2</td>
+								<td>
+									<button onclick="incrementSkill('Location 2 (INT)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Location 2 (INT)')">-</button>
+								</td>
+								
+								<td id="Location 2 (INT) Rank">0</td>
+								<td name="intTotal">2</td>
+								<td id="Location 2 (INT) Base" name="intBase">2</td>
+							</tr>
+							<tr>
+								<td>Science <b>(INT)</b></td>
+							</tr>
+							<tr>
+								<td>- - > Field 1</td>
+								<td>
+									<button onclick="incrementSkill('Field 1 (INT)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Field 1 (INT)')">-</button>
+								</td>
+								
+								<td id="Field 1 (INT) Rank">0</td>
+								<td name="intTotal">2</td>
+								<td id="Field 1 (INT) Base" name="intBase">2</td>
+							</tr>
+							<tr>
+								<td>- - > Field 2</td>
+								<td>
+									<button onclick="incrementSkill('Field 2 (INT)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Field 2 (INT)')">-</button>
+								</td>
+								
+								<td id="Field 2 (INT) Rank">0</td>
+								<td name="intTotal">2</td>
+								<td id="Field 2 (INT) Base" name="intBase">2</td>
+							</tr>
+							<tr>
+								<td>Tactics <b>(INT)</b></td>
+								<td>
+									<button onclick="incrementSkill('Tactics (INT)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Tactics (INT)')">-</button>
+								</td>
+								
+								<td id="Tactics (INT) Rank">0</td>
+								<td name="intTotal">2</td>
+								<td id="Tactics (INT) Base" name="intBase">2</td>
+							</tr>
+							<tr>
+								<td>Wilderness Survival <b>(INT)</b></td>
+								<td>
+									<button onclick="incrementSkill('Wilderness Survival (INT)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Wilderness Survival (INT)')">-</button>
+								</td>
+								
+								<td id="Wilderness Survival (INT) Rank">0</td>
+								<td name="intTotal">2</td>
+								<td id="Wilderness Survival (INT) Base" name="intBase">2</td>
 							</tr>
 
 							<!--FIGHTING SKILLS-->
@@ -1009,6 +1150,58 @@
 								<th>STAT</th>
 								<th>BASE</th>
 							</tr>
+							<tr>
+								<td><b>BRAWLING (DEX)</b></td>
+								<td>
+									<button onclick="incrementSkill('Brawling (DEX)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Brawling (DEX)')">-</button>
+								</td>
+								
+								<td id="Brawling (DEX) Rank">2</td>
+								<td name="dexTotal">2</td>
+								<td id="Brawling (DEX) Base" name="dexBase">4</td>
+							</tr>
+							<tr>
+								<td><b>EVASION (DEX)</b></td>
+								<td>
+									<button onclick="incrementSkill('Evasion (DEX)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Evasion (DEX)')">-</button>
+								</td>
+								
+								<td id="Evasion (DEX) Rank">2</td>
+								<td name="dexTotal">2</td>
+								<td id="Evasion (DEX) Base" name="dexBase">4</td>
+							</tr>
+							<tr>
+								<td>Martial Arts (x2) <b>(DEX)</b></td>
+								<td>
+									<button onclick="incrementSkill('Martial Arts (x2) (DEX)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Martial Arts (x2) (DEX)')">-</button>
+								</td>
+								
+								<td id="Martial Arts (x2) (DEX) Rank">0</td>
+								<td name="dexTotal">2</td>
+								<td id="Martial Arts (x2) (DEX) Base" name="dexBase">2</td>
+							</tr>
+							<tr>
+								<td>Melee Weapon <b>(DEX)</b></td>
+								<td>
+									<button onclick="incrementSkill('Melee Weapon (DEX)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Melee Weapon (DEX)')">-</button>
+								</td>
+								
+								<td id="Melee Weapon (DEX) Rank">0</td>
+								<td name="dexTotal">2</td>
+								<td id="Melee Weapon (DEX) Base" name="dexBase">2</td>
+							</tr>
 
 							<!--PERFORMANCE SKILLS-->
 							<tr>
@@ -1019,6 +1212,48 @@
 								<th>STAT</th>
 								<th>BASE</th>
 							</tr>
+							<tr>
+								<td>Acting <b>(COOL)</b></td>
+								<td>
+									<button onclick="incrementSkill('Acting (COOL)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Acting (COOL)')">-</button>
+								</td>
+								
+								<td id="Acting (COOL) Rank">0</td>
+								<td name="coolTotal">2</td>
+								<td id="Acting (COOL) Base" name="coolBase">2</td>
+							</tr>
+							<tr>
+								<td>Play Instrument <b>(TECH)</b></td>
+							</tr>
+							<tr>
+								<td>- - > Instrument 1</td>
+								<td>
+									<button onclick="incrementSkill('Instrument 1 (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Instrument 1 (TECH)')">-</button>
+								</td>
+								
+								<td id="Instrument 1 (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Instrument 1 (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td>- - > Instrument 2</td>
+								<td>
+									<button onclick="incrementSkill('Instrument 2 (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Instrument 2 (TECH)')">-</button>
+								</td>
+								
+								<td id="Instrument 2 (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Instrument 2 (TECH) Base" name="techBase">2</td>
+							</tr>
 
 							<!--RANGED WEAPON SKILLS-->
 							<tr>
@@ -1029,10 +1264,50 @@
 								<th>STAT</th>
 								<th>BASE</th>
 							</tr>
+							<tr>
+								<td>Archery <b>(REF)</b></td>
+								<td>
+									<button onclick="incrementSkill('Archery (REF)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Archery (REF)')">-</button>
+								</td>
+								
+								<td id="Archery (REF) Rank">0</td>
+								<td name="refTotal">2</td>
+								<td id="Archery (REF) Base" name="refBase">2</td>
+							</tr>
+							<tr>
+								<td>Autofire (x2) <b>(REF)</b></td>
+								<td>
+									<button onclick="incrementSkill('Autofire (x2) (REF)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Autofire (x2) (REF)')">-</button>
+								</td>
+								
+								<td id="Autofire (x2) (REF) Rank">0</td>
+								<td name="refTotal">2</td>
+								<td id="Autofire (x2) (REF) Base" name="refBase">2</td>
+							</tr>
+							<tr>
+								<td>Handgun <b>(REF)</b></td>
+								<td>
+									<button onclick="incrementSkill('Handgun (REF)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Handgun (REF)')">-</button>
+								</td>
+								
+								<td id="Handgun (REF) Rank">0</td>
+								<td name="refTotal">2</td>
+								<td id="Handgun (REF) Base" name="refBase">2</td>
+							</tr>
 						</table>
 					</td>
 
 					<td>
+						<!--SKILLS COLUMN 3-->
 						<table>
 							<!--RANGED WEAPON SKILLS-->
 							<tr>
@@ -1042,6 +1317,32 @@
 								<th>LVL</th>
 								<th>STAT</th>
 								<th>BASE</th>
+							</tr>
+							<tr>
+								<td>Heavy Weapons (x2) <b>(REF)</b></td>
+								<td>
+									<button onclick="incrementSkill('Heavy Weapons (x2) (REF)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Heavy Weapons (x2) (REF)')">-</button>
+								</td>
+								
+								<td id="Heavy Weapons (x2) (REF) Rank">0</td>
+								<td name="refTotal">2</td>
+								<td id="Heavy Weapons (x2) (REF) Base" name="refBase">2</td>
+							</tr>
+							<tr>
+								<td>Shoulder Arms <b>(REF)</b></td>
+								<td>
+									<button onclick="incrementSkill('Shoulder Arms (REF)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Shoulder Arms (REF)')">-</button>
+								</td>
+								
+								<td id="Shoulder Arms (REF) Rank">0</td>
+								<td name="refTotal">2</td>
+								<td id="Shoulder Arms (REF) Base" name="refBase">2</td>
 							</tr>
 
 							<!--SOCIAL SKILLS-->
@@ -1053,6 +1354,123 @@
 								<th>STAT</th>
 								<th>BASE</th>
 							</tr>
+							<tr>
+								<td>Bribery <b>(COOL)</b></td>
+								<td>
+									<button onclick="incrementSkill('Bribery (COOL)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Bribery (COOL)')">-</button>
+								</td>
+								
+								<td id="Bribery (COOL) Rank">0</td>
+								<td name="coolTotal">2</td>
+								<td id="Bribery (COOL) Base" name="coolBase">2</td>
+							</tr>
+							<tr>
+								<td><b>CONVERSATION (EMP)</b></td>
+								<td>
+									<button onclick="incrementSkill('Conversation (EMP)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Conversation (EMP)')">-</button>
+								</td>
+								
+								<td id="Conversation (EMP) Rank">2</td>
+								<td name="empTotal">2</td>
+								<td id="Conversation (EMP) Base" name="empBase">4</td>
+							</tr>
+							<tr>
+								<td><b>HUMAN PERCEPTION (EMP)</b></td>
+								<td>
+									<button onclick="incrementSkill('Human Perception (EMP)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Human Perception (EMP)')">-</button>
+								</td>
+								
+								<td id="Human Perception (EMP) Rank">2</td>
+								<td name="empTotal">2</td>
+								<td id="Human Perception (EMP) Base" name="empBase">4</td>
+							</tr>
+							<tr>
+								<td>Interrogation <b>(COOL)</b></td>
+								<td>
+									<button onclick="incrementSkill('Interrogation (COOL)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Interrogation (COOL)')">-</button>
+								</td>
+								
+								<td id="Interrogation (COOL) Rank">0</td>
+								<td name="coolTotal">2</td>
+								<td id="Interrogation (COOL) Base" name="coolBase">2</td>
+							</tr>
+							<tr>
+								<td><b>PERSUASION (COOL)</b></td>
+								<td>
+									<button onclick="incrementSkill('Persuasion (COOL)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Persuasion (COOL)')">-</button>
+								</td>
+								
+								<td id="Persuasion (COOL) Rank">2</td>
+								<td name="coolTotal">2</td>
+								<td id="Persuasion (COOL) Base" name="coolBase">4</td>
+							</tr>
+							<tr>
+								<td>Personal Grooming <b>(COOL)</b></td>
+								<td>
+									<button onclick="incrementSkill('Personal Grooming (COOL)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Personal Grooming (COOL)')">-</button>
+								</td>
+								
+								<td id="Personal Grooming (COOL) Rank">0</td>
+								<td name="coolTotal">2</td>
+								<td id="Personal Grooming (COOL) Base" name="coolBase">2</td>
+							</tr>
+							<tr>
+								<td>Streetwise <b>(COOL)</b></td>
+								<td>
+									<button onclick="incrementSkill('Streetwise (COOL)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Streetwise (COOL)')">-</button>
+								</td>
+								
+								<td id="Streetwise (COOL) Rank">0</td>
+								<td name="coolTotal">2</td>
+								<td id="Streetwise (COOL) Base" name="coolBase">2</td>
+							</tr>
+							<tr>
+								<td>Trading <b>(COOL)</b></td>
+								<td>
+									<button onclick="incrementSkill('Trading (COOL)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Trading (COOL)')">-</button>
+								</td>
+								
+								<td id="Trading (COOL) Rank">0</td>
+								<td name="coolTotal">2</td>
+								<td id="Trading (COOL) Base" name="coolBase">2</td>
+							</tr>
+							<tr>
+								<td>Wardrobe & Style <b>(COOL)</b></td>
+								<td>
+									<button onclick="incrementSkill('Wardrobe & Style (COOL)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Wardrobe & Style (COOL)')">-</button>
+								</td>
+								
+								<td id="Wardrobe & Style (COOL) Rank">0</td>
+								<td name="coolTotal">2</td>
+								<td id="Wardrobe & Style (COOL) Base" name="coolBase">2</td>
+							</tr>
 
 							<!--TECHNIQUE SKILLS-->
 							<tr>
@@ -1062,6 +1480,201 @@
 								<th>LVL</th>
 								<th>STAT</th>
 								<th>BASE</th>
+							</tr>
+							<tr>
+								<td>Air Vehicle Tech <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Air Vehicle Tech (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Air Vehicle Tech (TECH)')">-</button>
+								</td>
+								
+								<td id="Air Vehicle Tech (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Air Vehicle Tech (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td>Basic Tech <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Basic Tech (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Basic Tech (TECH)')">-</button>
+								</td>
+								
+								<td id="Basic Tech (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Basic Tech (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td>Cybertech <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Cybertech (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Cybertech (TECH)')">-</button>
+								</td>
+								
+								<td id="Cybertech (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Cybertech (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td>Demolitions (x2) <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Demolitions (x2) (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Demolitions (x2) (TECH)')">-</button>
+								</td>
+								
+								<td id="Demolitions (x2) (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Demolitions (x2) (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td>Electronics/Security Tech (x2) <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Electronics/Security Tech (x2) (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Electronics/Security Tech (x2) (TECH)')">-</button>
+								</td>
+								
+								<td id="Electronics/Security Tech (x2) (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Electronics/Security Tech (x2) (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td><b>FIRST AID (TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('First Aid (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('First Aid (TECH)')">-</button>
+								</td>
+								
+								<td id="First Aid (TECH) Rank">2</td>
+								<td name="techTotal">2</td>
+								<td id="First Aid (TECH) Base" name="techBase">4</td>
+							</tr>
+							<tr>
+								<td>Forgery <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Forgery (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Forgery (TECH)')">-</button>
+								</td>
+								
+								<td id="Forgery (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Forgery (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td>Land Vehicle Tech <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Land Vehicle Tech (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Land Vehicle Tech (TECH)')">-</button>
+								</td>
+								
+								<td id="Land Vehicle Tech (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Land Vehicle Tech (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td>Paint/Draw/Sculpt <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Paint/Draw/Sculpt (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Paint/Draw/Sculpt (TECH)')">-</button>
+								</td>
+								
+								<td id="Paint/Draw/Sculpt (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Paint/Draw/Sculpt (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td>Paramedic (x2) <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Paramedic (x2) (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Paramedic (x2) (TECH)')">-</button>
+								</td>
+								
+								<td id="Paramedic (x2) (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Paramedic (x2) (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td>Photography/Film <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Photography/Film (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Photography/Film (TECH)')">-</button>
+								</td>
+								
+								<td id="Photography/Film (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Photography/Film (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td>Pick Lock <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Pick Lock (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Pick Lock (TECH)')">-</button>
+								</td>
+								
+								<td id="Pick Lock (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Pick Lock (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td>Pick Pocket <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Pick Pocket (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Pick Pocket (TECH)')">-</button>
+								</td>
+								
+								<td id="Pick Pocket (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Pick Pocket (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td>Sea Vehicle Tech <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Sea Vehicle Tech (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Sea Vehicle Tech (TECH)')">-</button>
+								</td>
+								
+								<td id="Sea Vehicle Tech (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Sea Vehicle Tech (TECH) Base" name="techBase">2</td>
+							</tr>
+							<tr>
+								<td>Weaponstech <b>(TECH)</b></td>
+								<td>
+									<button onclick="incrementSkill('Weaponstech (TECH)')">+</button>
+								</td>
+								<td>
+									<button onclick="decrementSkill('Weaponstech (TECH)')">-</button>
+								</td>
+								
+								<td id="Weaponstech (TECH) Rank">0</td>
+								<td name="techTotal">2</td>
+								<td id="Weaponstech (TECH) Base" name="techBase">2</td>
 							</tr>
 						</table>
 					</td>

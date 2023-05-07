@@ -35,8 +35,8 @@ skills.set('Perception (INT)', 2);
 skills.set('Athletics (DEX)', 2);
 skills.set('Stealth (DEX)', 2);
 skills.set('Education (INT)', 2);
-skills.set('Streetslang', 2);
-skills.set('Your Home', 2);
+skills.set('Streetslang (INT)', 2);
+skills.set('Your Home (INT)', 2);
 skills.set('Brawling (DEX)', 2);
 skills.set('Evasion (DEX)', 2);
 skills.set('Convesation (EMP)', 2);
@@ -244,9 +244,9 @@ function isRequired(skillName)
 			return true;
 		case "Education (INT)":
 			return true;
-		case "Streetslang":
+		case "Streetslang (INT)":
 			return true;
-		case "Your Home":
+		case "Your Home (INT)":
 			return true;
 		case "Brawling (DEX)":
 			return true;

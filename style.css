@@ -14,6 +14,8 @@ h1 {
 }
 
 table {
+	background-color: #ff3f20;
+	color:#ff3f20;
 	border: 3px solid #ff3f20;
 	border-collapse: collapse;
 }
@@ -24,12 +26,15 @@ td {
 	border: 3px solid #ff3f20;
 	border-collapse: collapse;
 	padding: 8px;
+	height:25px;
 }
 
 th {
 	background-color: black;
 	color:white;
 	border: 1px solid black;
+	padding: 8px;
+	height:25px;
 }
 
 button {
