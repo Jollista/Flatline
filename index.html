@@ -1817,7 +1817,7 @@
 							<th>SELL</th>
 						</tr>
 						<tr>
-							<td>Bayonet</td>
+							<td><b>Bayonet</b></td>
 							<td>All Non-Exotic Ranged Weapons fired with the Shoulder Arms Skill.</td>
 							<td>When wielded, this weapon can also be used as a Light Melee Weapon. While this is attached to a weapon, it cannot be concealed under clothing.</td>
 							<td>100 eb (Premium)</td>
@@ -1841,7 +1841,7 @@
 							<th>SELL</th>
 						</tr>
 						<tr>
-							<td>Basic Ammunition</td>
+							<td><b>Basic Ammunition</b></td>
 							<td>All except Grenades and Rockets.</td>
 							<td>This is the standard ammunition for the weapon. It has no special features.</td>
 							<td>10 eb (Cheap)</td>
@@ -1864,7 +1864,7 @@
 							<th>SELL</th>
 						</tr>
 						<tr>
-							<td>Air Pistol</td>
+							<td><b>Air Pistol</b></td>
 							<td>An Exotic Medium Pistol. Fires paint balls, which are typically filled with paint, and thus deal no damage.
 								If you filled the paint balls with Acid however, each Acid Paintball still deals no damage, but lowers the SP
 								of the target's armor (worn in the location shot) by one with each successful hit. Great for trying to capture
@@ -1893,7 +1893,7 @@
 							<th>SELL</th>
 						</tr>
 						<tr>
-							<td>Leathers</td>
+							<td><b>Leathers</b></td>
 							<td>4</td>
 							<td>None</td>
 							<td>Thin leather with reinforced pads at shoulders, hips, and gut. Favored by Nomads and other 'punks who ride
@@ -1918,7 +1918,7 @@
 							<th>SELL</th>
 						</tr>
 						<tr>
-							<td>Agent</td>
+							<td><b>Agent</b></td>
 							<td>
 								Self-adaptive-AI powered smartphone; that
 								"learns" how best to fit your needs simply by inter-
@@ -2011,7 +2011,7 @@
 							<th>SELL</th>
 						</tr>
 						<tr>
-							<td>Black Lace</td>
+							<td><b>Black Lace</b></td>
 							<td>
 								<ul>
 									<li>Lasts 24 Hours.</li>
@@ -2055,8 +2055,34 @@
 					<h3>CYBERWARE</h3>
 					<h4>FASHIONWARE (7 Fashionware Option Slots Available)</h4>
 					<table>
-
+						<tr>
+							<th>Name</th>
+							<th>Install</th>
+							<th>Description & Data</th>
+							<th>COST</th>
+							<th>HL</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
+						<tr>
+							<td><b>Biomonitor</b></td>
+							<td>Mall</td>
+							<td>
+								Subdermal implant which generates a constant LED readout of pulse, temperature,
+								respiration, blood sugar, etc. You can link your Biomonitor to your Agent to allow it to
+								track your wellness.
+							</td>
+							<td>100 eb (Expensive)</td>
+							<td>0 (N/A)</td>
+							<td>
+								<button onclick="purchaseCyberware('Biomonitor', 100, 0)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Biomonitor', 100, 0)">-</button>
+							</td>
+						</tr>
 					</table>
+
 					<h4>NEURALWARE (Foundational Cyberware: Neural Link)</h4>
 					<table>
 						<tr>
@@ -2069,7 +2095,7 @@
 							<th>SELL</th>
 						</tr>
 						<tr>
-							<td>Neural Link</td>
+							<td><b>Neural Link</b></td>
 							<td>Clinic</td>
 							<td>
 								Wired artificial nervous system, required to use Neuralware, and Subdermal Grips.
@@ -2113,28 +2139,86 @@
 
 					<h3>CYBERDECK HARDWARE</h3>
 					<table>
-
+						<tr>
+							<th>Name</th>
+							<th>Data</th>
+							<th>COST</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
+						<tr>
+							<td><b>Backup Drive</b></td>
+							<td>
+								While installed on a Cyberdeck, a Backup Drive "saves" Non-Black ICE Attacker, Defender, or Booster Programs
+								that are destroyed by pulling them into the Backup Drive the instant before they meet their end. As a Meat
+								Action, a Netrunner can re-install all Programs "saved" by the Backup Drive onto their deck, if they have
+								the Slots for them. If removed from a Cyberdeck, the Backup Drive erases its contents automatically. Restored
+								Programs with once-per-Netrun restrictions and the like are restored in the exact state they were saved in, so
+								you can't kill your own Armor to refresh it. Yeah, that means you. <b>Takes 2 Hardware Option Slots.</b>
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>
+								<button onclick="purchase('Backup Drive', 100)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Backup Drive', 100)">-</button>
+							</td>
+						</tr>
 					</table>
 
 					<h3>PROGRAMS</h3>
+					<h4>BOOSTERS</h4>
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Class</th>
+							<th>ATK</th>
+							<th>DEF</th>
+							<th>REZ</th>
+							<th>Effect</th>
+							<th>Icon</th>
+							<th>COST</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
+						<tr>
+							<td><b>Eraser</b></td>
+							<td>Booster</td>
+							<td>0</td>
+							<td>0</td>
+							<td>7</td>
+							<td>
+								Increases all Cloak Checks you make by +2 as long as this Program
+								remains Rezzed.
+							</td>
+							<td>
+								A pink glob exuding tiny soap bubbles
+							</td>
+							<td>20 eb (Everyday)</td>
+							<td>
+								<button onclick="purchase('Eraser', 20)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Eraser', 20)">-</button>
+							</td>
+						</tr>
+					</table>
+
+					<h4>DEFENDERS</h4>
 					<table>
 
 					</table>
 
-					<h3>HOME DEFENSES</h3>
+					<h4>ATTACKERS</h4>
 					<table>
 
 					</table>
 
-					<h3>SERVICES & ENTERTAINMENT</h3>
+					<h4>BLACK ICE</h4>
 					<table>
-
+						
 					</table>
 
-					<h3>LIFESTYLE & HOUSING</h3>
-					<table>
-
-					</table>
 				</div>
 			</div>
 			
