@@ -348,6 +348,8 @@ function purchaseCyberware (item, ebCost, humCost)
 
 	//update humanity display
 	document.getElementById("Humanity").innerText= humanity + " / " + (stats.get("EMP")*10);
+
+	return true;
 }
 
 function sellCyberware (item, ebCost, humCost) 
@@ -358,4 +360,26 @@ function sellCyberware (item, ebCost, humCost)
 
 	//update humanity display
 	document.getElementById("Humanity").innerText= humanity + " / " + (stats.get("EMP")*10) + " HUM";
+}
+
+function checkSoul() 
+{
+	var checkbox = document.getElementById('soul');
+	if (checkbox.checked)
+	{
+		//add extra stuff
+		humanity -= 7;
+		inventory.set("Complimentary Neural Link", 1);
+		funds += soulValue;
+	}
+	else //remove extra stuff
+	{
+		funds -= soulValue;
+		sellCyberware("Complimentary Neural Link", 0, 7);
+	}
+	
+	//update display
+	document.getElementById("Funds").innerText=funds+" eb";
+	document.getElementById("Humanity").innerText= humanity + " / " + (stats.get("EMP")*10) + " HUM";
+	updateGearDisplay();
 }
