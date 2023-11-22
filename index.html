@@ -4246,27 +4246,287 @@
 
 					<h4>CYBEROPTICS (Foundational Cyberware: Cybereye)</h4>
 					<table>
-
+						<tr>
+							<th>Name</th>
+							<th>Install</th>
+							<th>Description & Data</th>
+							<th>COST</th>
+							<th>HL</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
+						<tr>
+							<td><b>Cybereye</b></td>
+							<td>Clinic</td>
+							<td>All following options are installed in an artificial eye that replaces a meat one. Each
+								Cybereye has 3 Option Slots for Cybereye Options.
+								
+								<br>Some options must be paired to work properly (purchased twice and installed in two
+								different Cybereyes on a user. Humanity Loss is calculated separately for each purchase)
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>7 (2d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cybereye', 100, 7)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cybereye', 100, 7)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Anti-Dazzle</b></td>
+							<td>Mall</td>
+							<td>Cybereye Option. User is immune to blindness or other effects caused by dangerous
+								flashes of light, like those of a flashbang. Requires two Cybereyes and must be
+								paired.
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>2 (1d6/2 Round up)</td>
+							<td>
+								<button onclick="purchaseCyberware('Anti-Dazzle', 100, 2)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Anti-Dazzle', 100, 2)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Chyron</b></td>
+							<td>Mall</td>
+							<td>Cybereye Option. Projects a tiny subscreen into user's normal field of vision for messages,
+								video, etc. from a user's other cyberware or electronics. Picture in a picture for real life.
+								Requires a Cybereye.
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>2 (1d6/2 Round up)</td>
+							<td>
+								<button onclick="purchaseCyberware('Chyron', 100, 2)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Chyron', 100, 2)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Color Shift</b></td>
+							<td>Mall</td>
+							<td>Cybereye Option. Cosmetic upgrade allows unlimited color and pattern changes to be
+								made as an Action. Eye can optionally be temperature sensitive or reactant to hormone
+								changes in the body. Requires a Cybereye
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>2 (1d6/2 Round up)</td>
+							<td>
+								<button onclick="purchaseCyberware('Color Shift', 100, 2)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Color Shift', 100, 2)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Dartgun</b></td>
+							<td>Clinic</td>
+							<td>Cybereye Option. Dartgun Exotic Weapon, with only a single shot in the clip, concealed inside
+								the Cybereye. Requires a Cybereye and takes 3 Option Slots.
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>2 (1d6/2 Round up)</td>
+							<td>
+								<button onclick="purchaseCyberware('Dartgun', 500, 2)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Dartgun', 500, 2)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Image Enhance</b></td>
+							<td>Mall</td>
+							<td>Cybereye Option. User adds +2 to their Perception, Lip Reading, and Conceal/Reveal Object
+								Skills for Checks which include sight. Requires two Cybereyes and must be paired.
+								Multiple installations of this option provide user no additional benefit.
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Image Enhance', 500, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Image Enhance', 500, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Low Light/Infrared/UV</b></td>
+							<td>Mall</td>
+							<td>Cybereye Option. Reduces penalties imposed by darkness and other intangible
+								obscurement, like smoke, fog, etc. to 0. User can distinguish hot meat from cold metal
+								but cannot see through anything that could provide cover. Requires two Cybereyes,
+								must be paired, and takes 2 Option Slots per Cybereye.
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Low Light/Infrared/UV', 500, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Low Light/Infrared/UV', 500, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>MicroOptics</b></td>
+							<td>Clinic</td>
+							<td>Cybereye Option. Microscope providing user up to 400x magnification. Requires a
+								Cybereye.
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>2 (1d6/2 Round up)</td>
+							<td>
+								<button onclick="purchaseCyberware('MicroOptics', 100, 2)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('MicroOptics', 100, 2)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>MicroVideo</b></td>
+							<td>Clinic</td>
+							<td>Cybereye Option. Camera in eye records video and audio to a standard Memory Chip or a
+								linked Agent. Requires a Cybereye and takes 2 Option Slots.
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>2 (1d6/2 Round up)</td>
+							<td>
+								<button onclick="purchaseCyberware('MicroVideo', 500, 2)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('MicroVideo', 500, 2)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Radiation Detector</b></td>
+							<td>Clinic</td>
+							<td>Cybereye Option. Radiation readings within 100m/yds of the user are displayed in user's
+								vision hovering over their source in the form of a blue glow. Requires a Cybereye.
+							</td>
+							<td>1,000 eb (V. Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Radiation Detector', 1000, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Radiation Detector', 1000, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Targeting Scope</b></td>
+							<td>Clinic</td>
+							<td>Cybereye Option. User gets a +1 to their Check when making an Aimed Shot. Multiple
+								installations of this option provide user no additional benefit. Requires a Cybereye.
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Targeting Scope', 500, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Targeting Scope', 500, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>TeleOptics</b></td>
+							<td>Clinic</td>
+							<td>Cybereye Option. User can see detail up to 800m/yds away. When attacking a target
+								51m/yds or further away with either a weapon's single shot firing mode or an Aimed
+								Shot, you can add a +1 to your Check. Multiple installations of this option provide user
+								no additional benefit. Does not stack with Sniping Scope Weapon Attachment. Requires
+								a Cybereye.
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('TeleOptics', 500, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('TeleOptics', 500, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Virtuality</b></td>
+							<td>Mall</td>
+							<td>Cybereye Option. Projects cyberspace imagery over user's view of the world. Never forget
+								your Virtuality Goggles again. Requires two Cybereyes and must be paired.
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>2 (1d6/2 Round up)</td>
+							<td>
+								<button onclick="purchaseCyberware('Virtuality', 100, 2)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Virtuality', 100, 2)">-</button>
+							</td>
+						</tr>
 					</table>
+
 					<h4>CYBERAUDIO (Foundational Cyberware: Cyberaudio Suite)</h4>
 					<table>
-
+						<tr>
+							<th>Name</th>
+							<th>Install</th>
+							<th>Description & Data</th>
+							<th>COST</th>
+							<th>HL</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
 					</table>
+
 					<h4>INTERNAL BODY CYBERWARE (7 Internal Body Option Slots Available)</h4>
 					<table>
-
+						<tr>
+							<th>Name</th>
+							<th>Install</th>
+							<th>Description & Data</th>
+							<th>COST</th>
+							<th>HL</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
 					</table>
+
 					<h4>EXTERNAL BODY CYBERWARE (7 External Body Option Slots Available)</h4>
 					<table>
-
+						<tr>
+							<th>Name</th>
+							<th>Install</th>
+							<th>Description & Data</th>
+							<th>COST</th>
+							<th>HL</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
 					</table>
+
 					<h4>CYBERLIMBS</h4>
 					<table>
-
+						<tr>
+							<th>Name</th>
+							<th>Install</th>
+							<th>Description & Data</th>
+							<th>COST</th>
+							<th>HL</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
 					</table>
+
 					<h4>BORGWARE</h4>
 					<table>
-
+						<tr>
+							<th>Name</th>
+							<th>Install</th>
+							<th>Description & Data</th>
+							<th>COST</th>
+							<th>HL</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
 					</table>
 
 					<h3>CYBERDECK HARDWARE</h3>
