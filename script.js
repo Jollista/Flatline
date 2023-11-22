@@ -264,3 +264,62 @@ function isRequired(skillName)
 			return false;
 	}
 }
+
+
+/*
+	BUY YOUR GEAR
+ */
+
+var funds = 2550;
+var soulValue = 1500;
+var inventory = new Map();
+
+function updateGearDisplay() 
+{
+	//update inventory
+	var inventoryString ="";
+	inventory.forEach((values, keys) => {
+		inventoryString += "- " + keys + "\t\t x " + values + "\n";
+	});
+	document.getElementById("InventoryList").innerText=inventoryString;
+}
+
+function purchase (item, cost) 
+{
+	//cost check
+	if (cost > funds)
+		return;
+
+	//remove funds, add to inventory
+	funds -= cost;
+	if (!inventory.has(item))
+	
+		inventory.set(item, 1);
+	else
+		inventory.set(item, inventory.get(item)+1);
+
+	//update display
+	updateGearDisplay();
+	//update funds
+	document.getElementById("Funds").innerText=funds+" eb";
+}
+
+function sell (item, cost) 
+{
+	//quantity check
+	if (!inventory.has(item) || inventory.get(item) == 0) //no transaction if no item
+		return;
+	
+	//add funds and decrement item
+	funds += cost;
+	inventory.set(item, inventory.get(item)-1);
+
+	//if no more of item
+	if (inventory.get(item) <= 0)
+		inventory.delete(item);
+
+	//update display
+	updateGearDisplay();
+	//update funds
+	document.getElementById("Funds").innerText=funds+" eb";
+}

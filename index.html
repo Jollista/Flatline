@@ -11,50 +11,1785 @@
 	<body>
 		<!--div content changed on button press-->
 		<div id="content">
-			<header>
-				<img src="images/logo.jpg" alt="Cyberpunk RED" height="350px" class="center">
+			<!--Header image-->
+			<header id="head">
+				<img id="header-image" src="images/Progress Animation by Sergey Grinevich.gif" alt="Cyberpunk RED" height="350px" class="center">
 			</header>
 
-			<h1>WELCOME TO THE NET.</h1>
+			<!--Chargen method description-->
+			<h1>COMPLETE</h1>
 
-			<!--Chargen Type Choices-->
-			<section class="sections">
-				<section class="chargen">
-					<h2>Streetrats (Templates):</h2>
-					<p>
-						If you've never roleplayed before or just want to get going
-						without a lot of fuss, Templates are the fastest way to start creating a Character. But
-						don't underestimate Templates! In the hands of an experienced roleplayer, even a tem-
-						plate can be modified to make a unique and fully fleshed-out Character by expanding
-						on the basics. By adding as you play, the Template gathers more individuality to itself,
-						getting better and better the more you play.
-					</p>
-					<a href="streetratChargen.html"><button>HIT THE STREET</button></a>
-				</section>
-				<section class="chargen">
-					<h2>Edgerunners (Fast and Dirty):</h2>
-					<p>
-						As you'll soon realize, the Cyberpunk RED
-						Character Generation system is designed to give you a lot of flexibility. You can tailor
-						the Character the way you want it, with lots of personal touches all through the process.
-						But when you need to create a Character quickly and without a lot of painstaking
-						detail, the Fast and Dirty method is an excellent option.
-					</p>
-					<a href="edgerunnerChargen.html"><button>DIVE OFF THE EDGE</button></a>
-				</section>
+			<!--ROLE SELECTION-->
+			<h2>CHOOSE YOUR ROLE</h2>
+			<div class="dropdown">
+				<button id="roleButton">ROLE</button>
+				<div class="dropdown-content">
+					<!--ROCKERBOY-->
+					<a onclick="selectRole('Rockerboy')" onmouseover="loadImage('images/Rockerboy.png')" onmouseout="loadImage()">Rockerboy
+						<div class="dropdown-content-desc">
+							<h3>ROCKERBOY</h3>
+							<p>
+								If you live to rock, this is where you belong. As a Rockerboy, you're one of
+								the street poets, the social conscience, and the rebels of the Time of the
+								Red. With the advent of digital porta-studios and garage music master-
+								ing, every Rockerboy with a message can take it to The Street, put it in the
+								record stores, bounce it off the comsats. Sometimes, your message isn't
+								something the Corporations or the government wants to hear. Sometimes
+								what you say is going to get right in the faces of the powerful people
+								who really want to run this world. But you don't care, because as a
+								Rockerboy, you know it's your place to challenge authority, whether
+								in straight-out protest songs that tell it like it is, playing kick-ass rock
+								n' roll to get the people away from the TV sets and into The Streets,
+								firing up the crowd with speeches, or composing fiery writings that
+								shape the minds and hearts of millions. You have a proud history
+								as a Rockerboy. Dylan, Springsteen, U2, NWA, the
+								Who, Jett, the Stones—the legions of hard-rock
+								heroes who told the truth with screaming guitars
+								or gut-honest lyrics. You have the power to
+								get the people up; to lead, inspire, and inform.
+								Your message can give the timid courage, the weak
+								strength, and the blind vision. Rockerboy legends like Johnny
+								Silverhand, Rockerboy Manson (for whom the Role is named)
+								and Kerry Eurodyne have led armies against Corporations and
+								governments. Rockerboys have exposed corruption and brought
+								down dictators. It's a lot of power for someone doing gigs every
+								night in another city. But you can handle it. After all: you came
+								to play!
+							</p>
+							<h3>CHARISMATIC IMPACT</h3>
+							<p>
+								The Rockerboy's Role Ability is Charismatic Impact. With this
+								ability, they can influence others by sheer presence of personality.
+								They need not be a musical performer; they can influence others
+								through poetry, art, dance, or simply their physical presence. They could
+								be a rocker—or a cult leader. As they grow in skill, they can affect larger
+								and larger groups and call on their fans for greater and greater requests
+								of loyalty
+							</p>
+							<img src = "images/CharismaticImpact.JPG">
+						</div>
+					</a>
+
+					<!--SOLO-->
+					<a onclick="selectRole('Solo')" onmouseover="loadImage('images/Solo.png')" onmouseout="loadImage()">Solo
+						<div class="dropdown-content-desc">
+							<h3>SOLO</h3>
+							<p>
+								You were reborn with a gun in your hand—the flesh and blood hand—not
+								the metallic weapons factory that covers most of your other arm. Whether
+								as a freelance guard and killer-for-hire, or as one of the Corporate
+								cybersoldiers who enforce business deals and the Company's "black
+								operations," you're one of the elite fighting machines of the Time of
+								the Red. Most Solos put in military time during the 4th Corporate
+								War, in a Corporate army, or in one of the government's current
+								"police actions" around the country. As the battle damage piles
+								up, you start to rely more and more upon tech: cyberlimbs for
+								weapons and armor, bio-program chips to increase your reflexes
+								and awareness, combat drugs to give you that edge over your
+								opponents. When you're the best of the best, you might even
+								leave the ranks of Corporate samurai and go ronin—freelanc-
+								ing your lethal talents as a killer, bodyguard, or enforcer to
+								whoever can pay your very high fees. Sounds good? There's a
+								price—a heavy one. You've lost so much of your original meat
+								body that you're almost a machine. Your killing reflexes are
+								so jacked up that you have to restrain yourself from going
+								berserk at any moment. Years of combat drugs taken to
+								keep the edge have given you terrifying addictions. There
+								are few people you can trust anymore. One night you might
+								sleep in a penthouse condo in the City, the next in a filthy
+								alley on The Street. But that's the price of being the best. And
+								you're willing to pay it. Because you're a Solo.
+							</p>
+							<h3>COMBAT AWARENESS</h3>
+							<p>
+								The Solo's Role Ability is Combat Awareness. With Combat
+								Awareness, a Solo can call up their training to have an
+								enhanced situational awareness of the battlefield. When
+								combat begins, anytime outside of combat, or in combat
+								with an Action, a Solo may divide the total number of
+								points they have in their Combat Awareness Role Ability
+								among a number of combat abilities. If a Solo chooses
+								to not change their point assignments, their previous ones
+								persist. Activating some of these abilities will cost the Solo
+								more points than others.
+							</p>
+							<img src = "images/CombatAwareness.JPG">
+						</div>
+					</a>
+
+					<!--NETRUNNER-->
+					<a onclick="selectRole('Netrunner')" onmouseover="loadImage('images/Netrunner.png')" onmouseout="loadImage()">Netrunner
+						<div class="dropdown-content-desc">
+							<h3>NETRUNNER</h3>
+							<p>
+								You're a brain-burning computer hacker & master of the Post-NET cyberverse
+								in the Time of the Red. At three, your parents bought you an old Kirama
+								LPD-12 cyberdeck with Zetatech 526 optical goggles (you were too
+								young for interface plugs), and your life was changed. By fifth grade,
+								you were already using REFRAME-G1s meta-programming to crack
+								into the school district's system and change your grades. When you
+								were thirteen, you shifted enough funds out of unprotected Trans
+								United Bank accounts to finance your first neural interface
+								plugs. You couldn't wait to run high and fast with the other gods
+								of the NET—Bartmoss, Magnificent Curtis, and the rest. Then
+								the 4th Corp War blew the Old NET apart. The R.A.B.I.D.S.
+								made NET travel a suicide run; the Nodes were fragmented or cor-
+								rupted. But there were still places to run. You just had to go there and jack in
+								the hard way. You traded in sitting on the couch for a Bodyweight combat
+								bodysuit and Virtuality 5 interface goggles to mesh NET with Meatspace.
+								The systems you cracked were smaller, but even deadlier. Now, you're
+								really part of a team, with Solos to cover your back, Medtechs to restart
+								your heart if the ICE gets you, and Techs to help you hot-wire your cyber-
+								deck for more speed and software deployment. Now, nothing can stop you.
+								As an electronic wraith, you slip into the "hardest" mainframe systems with
+								ease: stealing, trading, and selling their deepest secrets at will. The Black
+								ICE may still kill you in the end, but until the ride runs out you'll be there,
+								bare-brained and headfirst in the New NET.
+							</p>
+							<h3>INTERFACE</h3>
+							<p>
+								The Netrunner's Role Ability is Interface. Interface is what allows the
+								Netrunner to Netrun—to interface with electronic mind-modems (called
+								cyberdecks) to control computers, electronics, and associated program -
+								ming. The Interface Role Ability also gives the Netrunner access to a
+								wide suite of Abilities related to computer hacking and system control.
+							</p>
+							<img src = "images/Interface.JPG">
+						</div>
+					</a>
+
+					<!--TECH-->
+					<a onclick="selectRole('Tech')" onmouseover="loadImage('images/Tech.png')" onmouseout="loadImage()">Tech
+						<div class="dropdown-content-desc">
+							<h3>TECH</h3>
+							<p>
+								You can't leave anything alone—if it sits near you for more than
+								five minutes, you've disassembled it and made it into something
+								new. You've always got at least two screwdrivers and a wrench in
+								your pockets. Computer down? No problem. Hydrogen burner out in
+								your Metrocar? No problem. Can't get the video to run or your interface
+								glitching? No problem. You make your living building, fixing, and modi-
+								fying—a crucial occupation in a technological world recovering from
+								a War that broke the back of the supply chain. You can make some
+								good bucks fixing everyday stuff, but for the serious money you
+								need to tackle the big jobs. Illegal weapons. Illegal or stolen
+								cybertech. Corporate espionage and counter-espionage gear
+								for "black operations." If you're any good, you're making a lot
+								of money. And that money goes into new gadgets, hardware,
+								and information. Your black market work isn't just making you
+								friends—it's also racking you up an impressive number of enemies
+								as well—so you invest a lot in defense systems and, if really pushed
+								to the wall, call in a few markers on a Solo or two. You've fixed
+								up tech for everybody from black ops Corporate samurai to Ms.
+								Zepada down the block. No one's ever come back to you with a
+								complaint but that might be because of the turrets guarding your
+								front door. You're addicted to technology in all its forms and
+								that's what makes you a Tech.
+							</p>
+							<h3>MAKER</h3>
+							<p>
+								The Tech's Role Ability is Maker. Using the Maker Role Ability,
+								the Tech can fix, improve, modify, make, and invent new items.
+								Whenever a Tech increases their Maker Rank by one, they gain
+								one rank in two different Maker Specialties of their choice, including
+								repairing, upgrading, fabricating, and inventing.
+							</p>
+							<img src = "images/Maker1.JPG">
+							<img src = "images/Maker2.JPG">
+						</div>
+					</a>
+
+					<!--MEDTECH-->
+					<a onclick="selectRole('Medtech')" onmouseover="loadImage('images/Medtech.png')" onmouseout="loadImage()">Medtech
+						<div class="dropdown-content-desc">
+							<h3>MEDTECH</h3>
+							<p>
+								You're an artist, and the human body is your canvas. You've got the best tools
+								the Time of the Red can offer, and you know how to use them. If you're lucky,
+								you got to attend one of the real med schools scattered around the wreck of the
+								Old United States. And after the War, military hospitals were everywhere and
+								the few doctors on the war front needed helping hands to hold down screaming
+								patients and splice cyberware back together. So, maybe you learned that
+								way.
+								
+								<br>And there's always an old ripperdoc or two out there who hearken
+								back to that old science fiction story called The Bladerunner—not
+								that old flatscreen vid, but the really old sci-fi book about renegade
+								doctors who performed illegal street surgery in one of the first dys-
+								topian novels. Maybe one of those guys trained you. Maybe that's
+								where you are right now, patching up the wounded, mending up
+								the sick, and keeping the locals alive. For love, commitment, or
+								maybe a just a fat payday on the side.
+
+								<br>If you're really lucky, you've scored a berth in the local Trauma
+								Team franchise. Trauma Teams are groups of licensed paramedi-
+								cals who patrol the city looking for patients. You operate from an
+								AV-4 Urban Assault Vehicle, redesigned into an ambulance con-
+								figuration, and armed with a belly-mounted minigun. It's the best
+								of the best—Trauma Team charges some heavy subscription fees
+								to save its clients, and that translates into new medical toys, faster
+								AV ambulances, and hefty salaries for the best surgeons around.
+								
+								<br>It doesn't matter how you got here. What matters is that you're
+								here, on The Street, doing the job. And you'd be doing it no matter
+								what the reason. It's what marks you as a Medtech.
+							</p>
+							<h3>MEDICINE</h3>
+							<p>
+								The Medtech's Role Ability is Medicine. With this ability,
+								Medtechs can keep people alive who should be dead with
+								their knowledge, tools, and training. In the Time of the Red,
+								they are as much doctors as they are mechanics, caring for
+								people who are often more machine than human. Whenever
+								the Medtech increases their Medicine Rank, they also
+								choose one of three Medicine Specialties to allocate a
+								single point to: surgery, pharmaceuticals, or cryosystems
+								operation.
+							</p>
+							<img src = "images/Medicine.JPG">
+						</div>
+					</a>
+
+					<!--MEDIA-->
+					<a onclick="selectRole('Media')" onmouseover="loadImage('images/Media.png')" onmouseout="loadImage()">Media
+						<div class="dropdown-content-desc">
+							<h3>MEDIA</h3>
+							<p>
+								They're bending the truth out there. And you're going to stop
+								them. Someone has to do it. The Corporations used to rule the
+								world. They dumped toxics, destabilized economies, and com-
+								mitted murder with equal impunity. The government back then
+								couldn't even stop them—hell, they owned the government.
+								But then the War came.
+
+								<br>The War stripped away the facade and let us all know exactly
+								what had been going on under our noses. And the people who made
+								sure we all knew the score were the Medias. That's you. You've
+								got a vidlink and a press pass, and you're not afraid to use them.
+								You're a city-wide figure, seen nightly all over the Data Pool in the
+								Time of the Red. It's not like the old days, when you had a major
+								Mediacorp behind you; this time, you've gotta depend on your
+								fans, your contacts, and your own reputation. But it's harder for
+								these new Corps to make you disappear. So when you dig down
+								for the dirt and slime the corrupt officials and Corporate lapdogs
+								try to cover up, you can dig deep. The next morning, you can put
+								the details of their crimes all over the screamsheets and vidscreens.
+								Three or four times, the bad guys have tried to kill you—that's why
+								your backup's a crack Solo bodyguard and you've got one of the
+								top ‘Runners in the business digging through NET Architectures to
+								back your stories. You have to be good, or else.
+								
+								<br>Your ‘Runner's just phoned in with a hot lead. You grab your gear
+								and flag your backup. You're going to break those bastards. This time,
+								for sure.
+							</p>
+							<h3>CREDIBILITY</h3>
+							<p>
+								The Media's Role Ability is Credibility. The Media can not only
+								convince an audience of the truth of what they publish but also has
+								a larger audience the more credible they are. Medias also have
+								greater levels of access to sources and information; they are always
+								in the know with their ears to the ground to pick up on rumors and
+								information passively.
+							</p>
+							<img src = "images/Credibility1.JPG">
+							<img src = "images/Credibility2.JPG">
+						</div>
+					</a>
+
+					<!--EXEC-->
+					<a onclick="selectRole('Exec')" onmouseover="loadImage('images/Exec.png')" onmouseout="loadImage()">Exec
+						<div class="dropdown-content-desc">
+							<h3>EXEC</h3>
+							<p>
+								In the old days before the Time of the Red, you would have been a hard-
+								driven, fast-track MBA on their way up the Corporate ladder. Sure, it was
+								selling your soul to the Company, but face it: the Corporations ruled the
+								world. They controlled governments, markets, nations, armies—you name
+								it. And you knew that whoever controlled the Corporations controlled
+								everything else. But things changed when the largest Megacorps
+								on the planet got into a major war that was equal to anything any
+								real national governments could have thrown down.
+								
+								<br>Okay, so right now your life as a junior executive is any-
+								thing but easy. There are those underneath you who'd kill
+								for a shot at your job. Literally. There are those over you
+								who'd kill to keep you out of their jobs. Literally. And they're
+								not kidding about the killing—every up-and-comer in the
+								Corporation has their own Team of Solos and Netrunners
+								to cover important pet projects. Last week, you led a mixed
+								team of Solos, Netrunners, and Techs on a headhunting run to
+								"extract" a researcher from a rival company. You told yourself
+								you joined the Corporation to make it a better place—work
+								from the inside, you said. Or just until you could start your
+								own Corporation that would be...a little more honest. But now
+								you're not so sure. Your ideals are a little tarnished and things
+								are getting pretty bleak. But you can't worry about ethics
+								now. You've got a report due in an hour, and it looks like that
+								guy in sales is planning to ice your database for good.
+								
+								<br>You're gonna ice him first.
+							</p>
+							<h3>TEAMWORK</h3>
+							<p>
+								The Exec's Role Ability is Teamwork. Just like a real corporate
+								executive, the Exec builds a team whose members help them
+								accomplish their goals, whether legal or not, morale permit-
+								ting. Team members have a visible job description (like secre-
+								tary or driver) but also have a covert roles (such as Netrunner,
+								bodyguard, or assassin). Plus they get free housing and nice
+								set of clothes!
+							</p>
+							<img src = "images/Teamwork1.JPG">
+							<img src = "images/Teamwork2.JPG">
+							<img src = "images/Teamwork3.JPG">
+						</div>
+					</a>
+
+					<!--LAWMAN-->
+					<a onclick="selectRole('Lawman')" onmouseover="loadImage('images/Lawman.png')" onmouseout="loadImage()">Lawman
+						<div class="dropdown-content-desc">
+							<h3>LAWMAN</h3>
+							<p>
+								In the old days before the War, they only used to shoot at cops. Now you're lucky
+								if you just take a slug. The Street is mean these days, filled with new drugs, new
+								gangs, and new weapons that make a Minami-10 look like a kid's toy. But even so,
+								you're out there doing what you can to Protect—and Serve.
+								
+								<br>There used to be a big City Force, but most of the Old Guard in NCPD have been
+								thrown out on their own to keep what peace they can. The ones who remain still
+								take the Badge seriously; they work to keep people safe and make some kind of
+								stand against chaos. Even if you'd rather just walk a beat, if you're a professional
+								Lawman of any stripe, you're stuck carrying at least four high-caliber weapons,
+								most of them full-auto types, wearing a Kevlar ® vest that'll stop 850ft/lbs.
+								per square inch—and often you're still outgunned and outflanked. Half the
+								gangs were cybered up to begin with: super speed, super reflexes, could
+								see in the dark, carried weapons in their arms...and that was before the
+								War and the Fall of the Towers pumped a metric ton of milspec cybertech
+								into the Night Markets. The other half of the guys on The Street are free-
+								lance Corporate mercs who used to have jobs during the War; hired
+								to enforce Corp armies disbanded by the New United States' goon
+								squads. Now they're the goon squads and you're trying to keep
+								them under control too. Used to be the Corporate Cops had heavy
+								weapons, full combat armor, Trauma Team backup, AV-4 assault
+								vehicles, and gyrocopters with miniguns. But the nice, clean sectors
+								full of new office buildings and fancy restaurants—where no jacked-up
+								psychopunk is going to ever go on a killing spree with an FN-RAL37—are
+								mostly gone. Now you've got mostly burned-out buildings and abandoned
+								cars, where every night is a new firefight and another great opportunity for
+								a messy death. Or you might draw a Psycho Squad berth and get the job
+								of hunting down heavily armed and armored cyborgs who've flipped out. A
+								cyberpsycho can walk through machine gun fire and not even feel it, so a lot of
+								the Psycho Squad become a bit crazy themselves; they load up with boosted
+								reflexes, get some monstrously huge guns, and go hunt the cyborgs solo. But
+								you're not that crazy. Yet.
+							</p>
+							<h3>BACKUP</h3>
+							<p>
+								The Lawman's Role Ability is Backup. With this ability, Lawmen can call upon
+								the help of a group of fellow officers, based on the Lawman's Rank and the
+								conditions under which they make the call. This Backup is armed and armored
+								based on their Rank.
+							</p>
+							<img src = "images/Backup.JPG">
+						</div>
+					</a>
+
+					<!--FIXER-->
+					<a onclick="selectRole('Fixer')" onmouseover="loadImage('images/Fixer.png')" onmouseout="loadImage()">Fixer
+						<div class="dropdown-content-desc">
+							<h3>FIXER</h3>
+							<p>
+								You realized fast that you weren't ever going to get a Corporate job or be tough
+								enough to be a Solo. But you always knew you had a knack for figuring out
+								what other people wanted, and how to get it for them. For a price, of course.
+								Now your deals have moved past the nickel-and-dime stuff into the big time.
+								Maybe you move illegal weapons over the border. Or steal and resell medical
+								supplies. Perhaps you're a skill broker acting as an agent for high-priced
+								Solos and 'Runners, or even hiring a whole Nomad pack to back a client's
+								contracts. You buy and sell favors like an old-style Mafia godfather. You
+								have connections into all kinds of businesses, deals, and political groups. You
+								use your contacts and allies as part of a vast web of intrigue and coercion.
+								If there's a hot nightclub in the City, you've bought into it. If there are
+								military-class weapons on The Street, you smuggled ‘em in. If there's a
+								faction war going down, you're negotiating between sides with an
+								eye on the main chance. But you're not entirely in it for the bucks.
+								If someone needs to get the heat off, you'll hide them. You get
+								people housing when there isn't any, and you bring in food
+								when the streets are blockaded. Maybe you do it because
+								you know they'll owe you later, but you're not sure. You're
+								one part Robin Hood and two parts AI Capone. In the past,
+								they would have called you a crime lord. But this is the
+								fragmented, nasty, deadly Time of the Red. So now they
+								call you a Fixer.
+							</p>
+							<h3>OPERATOR</h3>
+							<p>
+								The Fixer's Role Ability is Operator. Fixers know how to get things on the
+								black market and are adept at navigating the complex social customs of
+								The Street, where hundreds of cultures and economic levels collide. Fixers
+								maintain vast webs of contacts and clients who they can reach out to source
+								goods, favors, or information. Fixers can also source desirable resources
+								and make favorable deals.
+							</p>
+							<img src = "images/Operator1.JPG">
+							<img src = "images/Operator2.JPG">
+						</div>
+					</a>
+
+					<!--NOMAD-->
+					<a onclick="selectRole('Nomad')" onmouseover="loadImage('images/Nomad.png')" onmouseout="loadImage()">Nomad
+						<div class="dropdown-content-desc">
+							<h3>NOMAD</h3>
+							<p>
+								Years ago, the Corps drove your family off the farm. They rolled in, took over the
+								land, and put rent-a-cops all over the place. But that was before the War. You
+								were loners, homeless, until you created a Nomad Pack of nearly two-hundred
+								members. Back then, your Pack was crammed into a huge, ragtag fleet of
+								cars, vans, buses, and RVs roaming the freeways looking for supplies, odd
+								jobs, and spare parts in a fragmented world. The Pack was your home—it
+								had teachers, Medtechs, leaders, and mechanics—a virtual town on
+								wheels in which everyone was related by marriage or kinship. But in
+								the Time of the Red, your Nomad Pack has evolved. Your knowledge
+								of roadcraft—of how to get between the safezones over the savage
+								highways has allowed you to become the masters of getting
+								people, supplies, and materials to a world that desperately
+								needs them. Your cousins on the open seas have taken over
+								the huge container ships and turned them into the Nomad
+								convoys keeping civilization running. Your Deltajock fam-
+								boys keep the supply lines to the Orbital Highriders open. If
+								it has to get somewhere and get there safely, Nomads get
+								the job done. Your vehicles are well-armored and bristling
+								with stolen weapons: miniguns, rocket launchers, and the
+								like. Every kid knows how to use a rifle, and everyone
+								packs a knife. Like modern-day cowboys, you ride the
+								hard trail. You've got a gun, a bike, and your Family, and
+								that's all you need. You're a Nomad.
+							</p>
+							<h3>MOTO</h3>
+							<p>
+								The Nomad's Role Ability is Moto. Whenever a Nomad increases
+								their Rank in Moto, they have the option of adding another stock
+								vehicle (with minimum specs) of their Moto Rank or lower to the
+								pool of Family vehicles they have permission to use from the
+								Family Motorpool or to make an upgrade to one of their
+								current vehicles. Thanks to being around vehicles since birth,
+								Nomads are also able to drive any type of vehicle with
+								tremendous skill.
+							</p>
+							<img src = "images/Moto1.JPG">
+							<img src = "images/Moto2.JPG">
+							<img src = "images/Moto3.JPG">
+						</div>
+					</a>
+
+				</div>
+			</div>
+
+			<div id="roleDescription"></div>
+
+			<!--LIFEPATH RUNNING
+			<h2>RUN YOUR LIFEPATH</h2>-->
+			
+			<!--STATS-->
+			<div class="horizontal">
+				<h2>BUY YOUR STATS</h2>
+				<h3 id="statPointDisplay">Points: 42/62</h3>
+				<table>
+					<tr>
+						<th>ABILITY</th>
+						<th>RANK</th>
+					</tr>
+					<tr>
+						<td>INT</td>
+						<td name="intTotal">2</td>
+						<td>
+							<button onclick="incrementStat('INT')">+</button>
+						</td>
+						<td>
+							<button onclick="decrementStat('INT')">-</button>
+						</td>
+					</tr>
+					<tr>
+						<td>REF</td>
+						<td name="refTotal">2</td>
+						<td>
+							<button onclick="incrementStat('REF')">+</button>
+						</td>
+						<td>
+							<button onclick="decrementStat('REF')">-</button>
+						</td>
+					</tr>
+					<tr>
+						<td>DEX</td>
+						<td name="dexTotal">2</td>
+						<td>
+							<button onclick="incrementStat('DEX')">+</button>
+						</td>
+						<td>
+							<button onclick="decrementStat('DEX')">-</button>
+						</td>
+					</tr>
+					<tr>
+						<td>TECH</td>
+						<td name="techTotal">2</td>
+						<td>
+							<button onclick="incrementStat('TECH')">+</button>
+						</td>
+						<td>
+							<button onclick="decrementStat('TECH')">-</button>
+						</td>
+					</tr>
+					<tr>
+						<td>COOL</td>
+						<td name="coolTotal">2</td>
+						<td>
+							<button onclick="incrementStat('COOL')">+</button>
+						</td>
+						<td>
+							<button onclick="decrementStat('COOL')">-</button>
+						</td>
+					</tr>
+					<tr>
+						<td>WILL</td>
+						<td name="willTotal">2</td>
+						<td>
+							<button onclick="incrementStat('WILL')">+</button>
+						</td>
+						<td>
+							<button onclick="decrementStat('WILL')">-</button>
+						</td>
+					</tr>
+					<tr>
+						<td>LUCK</td>
+						<td name="luckTotal">2</td>
+						<td>
+							<button onclick="incrementStat('LUCK')">+</button>
+						</td>
+						<td>
+							<button onclick="decrementStat('LUCK')">-</button>
+						</td>
+					</tr>
+					<tr>
+						<td>MOVE</td>
+						<td name="moveTotal">2</td>
+						<td>
+							<button onclick="incrementStat('MOVE')">+</button>
+						</td>
+						<td>
+							<button onclick="decrementStat('MOVE')">-</button>
+						</td>
+					</tr>
+					<tr>
+						<td>BODY</td>
+						<td name="bodyTotal">2</td>
+						<td>
+							<button onclick="incrementStat('BODY')">+</button>
+						</td>
+						<td>
+							<button onclick="decrementStat('BODY')">-</button>
+						</td>
+					</tr>
+					<tr>
+						<td>EMP</td>
+						<td name="empTotal">2</td>
+						<td>
+							<button onclick="incrementStat('EMP')">+</button>
+						</td>
+						<td>
+							<button onclick="decrementStat('EMP')">-</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<!--SKILLS-->
+			<div class="horizontal">
+				<h2>SET YOUR SKILLS</h2>
+				<h3 id="skillPointDisplay">Points: 60/86</h3>
+				<table>
+					<tr>
+						<td>
+							<!--SKILLS COLUMN 1-->
+							<table>
+								<!--AWARENESS SKILLS-->
+								<tr>
+									<th>Awareness Skills</th>
+									<th> </th>
+									<th> </th>
+									<th>LVL</th>
+									<th>STAT</th>
+									<th>BASE</th>
+								</tr>
+								<tr>
+									<td><b>CONCENTRATION (WILL)</b></td>
+									<td>
+										<button onclick="incrementSkill('Concentration (WILL)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Concentration (WILL)')">-</button>
+									</td>
+
+									<td id="Concentration (WILL) Rank">2</td>
+									<td name="willTotal">2</td>
+									<td id="Concentration (WILL) Base" name="willBase">4</td>
+								</tr>
+								<tr>
+									<td>Conceal/Reveal Object <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Conceal/Reveal Object(INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Conceal/Reveal Object(INT)')">-</button>
+									</td>
+									
+									<td id="Conceal/Reveal Object(INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Conceal/Reveal Object(INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Lip Reading <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Lip Reading (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Lip Reading (INT)')">-</button>
+									</td>
+									
+									<td id="Lip Reading (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Lip Reading (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td><b>PERCEPTION (INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Perception (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Perception (INT)')">-</button>
+									</td>
+									
+									<td id="Perception (INT) Rank">2</td>
+									<td name="intTotal">2</td>
+									<td id="Perception (INT) Base" name="intBase">4</td>
+								</tr>
+								<tr>
+									<td>Tracking <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Tracking (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Tracking (INT)')">-</button>
+									</td>
+									
+									<td id="Tracking (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Tracking (INT) Base" name="intBase">2</td>
+								</tr>
+
+								<!--BODY SKILLS-->
+								<tr>
+									<th>Body Skills</th>
+									<th> </th>
+									<th> </th>
+									<th>LVL</th>
+									<th>STAT</th>
+									<th>BASE</th>
+								</tr>
+								<tr>
+									<td><b>ATHLETICS (DEX)</b></td>
+									<td>
+										<button onclick="incrementSkill('Athletics (DEX)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Athletics (DEX)')">-</button>
+									</td>
+									
+									<td id="Athletics (DEX) Rank">2</td>
+									<td name="dexTotal">2</td>
+									<td id="Athletics (DEX) Base" name="dexBase">4</td>
+								</tr>
+								<tr>
+									<td>Contortionist <b>(DEX)</b></td>
+									<td>
+										<button onclick="incrementSkill('Contortionist (DEX)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Contortionist (DEX)')">-</button>
+									</td>
+									
+									<td id="Contortionist (DEX) Rank">0</td>
+									<td name="dexTotal">2</td>
+									<td id="Contortionist (DEX) Base" name="dexBase">2</td>
+								</tr>
+								<tr>
+									<td>Dance <b>(DEX)</b></td>
+									<td>
+										<button onclick="incrementSkill('Dance (DEX)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Dance (DEX)')">-</button>
+									</td>
+									
+									<td id="Dance (DEX) Rank">0</td>
+									<td name="dexTotal">2</td>
+									<td id="Dance (DEX) Base" name="dexBase">2</td>
+								</tr>
+								<tr>
+									<td>Endurance <b>(WILL)</b></td>
+									<td>
+										<button onclick="incrementSkill('Endurance (WILL)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Endurance (WILL)')">-</button>
+									</td>
+									
+									<td id="Endurance (WILL) Rank">0</td>
+									<td name="willTotal">2</td>
+									<td id="Endurance (WILL) Base" name="willBase">2</td>
+								</tr>
+								<tr>
+									<td>Resist Torture/Drugs <b>(WILL)</b></td>
+									<td>
+										<button onclick="incrementSkill('Resist Torture/Drugs (WILL)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Resist Torture/Drugs (WILL)')">-</button>
+									</td>
+									
+									<td id="Resist Torture/Drugs (WILL) Rank">0</td>
+									<td name="willTotal">2</td>
+									<td id="Resist Torture/Drugs (WILL) Base" name="willBase">2</td>
+								</tr>
+								<tr>
+									<td><b>STEALTH (DEX)</b></td>
+									<td>
+										<button onclick="incrementSkill('Stealth (DEX)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Stealth (DEX)')">-</button>
+									</td>
+									
+									<td id="Stealth (DEX) Rank">2</td>
+									<td name="dexTotal">2</td>
+									<td id="Stealth (DEX) Base" name="dexBase">4</td>
+								</tr>
+
+								<!--CONTROL SKILLS-->
+								<tr>
+									<th>Control Skills</th>
+									<th> </th>
+									<th> </th>
+									<th>LVL</th>
+									<th>STAT</th>
+									<th>BASE</th>
+								</tr>
+								<tr>
+									<td>Drive Land Vehicle <b>(REF)</b></td>
+									<td>
+										<button onclick="incrementSkill('Drive Land Vehicle (REF)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Drive Land Vehicle (REF)')">-</button>
+									</td>
+									
+									<td id="Drive Land Vehicle (REF) Rank">0</td>
+									<td name="refTotal">2</td>
+									<td id="Drive Land Vehicle (REF) Base" name="refBase">2</td>
+								</tr>
+								<tr>
+									<td>Pilot Air Vehicle (x2) <b>(REF)</b></td>
+									<td>
+										<button onclick="incrementSkill('Pilot Air Vehicle (x2) (REF)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Pilot Air Vehicle (x2) (REF)')">-</button>
+									</td>
+									
+									<td id="Pilot Air Vehicle (x2) (REF) Rank">0</td>
+									<td name="refTotal">2</td>
+									<td id="Pilot Air Vehicle (x2) (REF) Base" name="refBase">2</td>
+								</tr>
+								<tr>
+									<td>Pilot Sea Vehicle <b>(REF)</b></td>
+									<td>
+										<button onclick="incrementSkill('Pilot Sea Vehicle (REF)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Pilot Sea Vehicle (REF)')">-</button>
+									</td>
+									
+									<td id="Pilot Sea Vehicle (REF) Rank">0</td>
+									<td name="refTotal">2</td>
+									<td id="Pilot Sea Vehicle (REF) Base" name="refBase">2</td>
+								</tr>
+								<tr>
+									<td>Riding <b>(REF)</b></td>
+									<td>
+										<button onclick="incrementSkill('Riding (REF)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Riding (REF)')">-</button>
+									</td>
+									
+									<td id="Riding (REF) Rank">0</td>
+									<td name="refTotal">2</td>
+									<td id="Riding (REF) Base" name="refBase">2</td>
+								</tr>
+
+								<!--EDUCATION SKILLS-->
+								<tr>
+									<th>Education Skills</th>
+									<th> </th>
+									<th> </th>
+									<th>LVL</th>
+									<th>STAT</th>
+									<th>BASE</th>
+								</tr>
+								<tr>
+									<td>Accounting <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Accounting (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Accounting (INT)')">-</button>
+									</td>
+									
+									<td id="Accounting (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Accounting (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Animal Handling <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Animal Handling (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Animal Handling (INT)')">-</button>
+									</td>
+									
+									<td id="Animal Handling (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Animal Handling (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Bureaucracy <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Bureaucracy (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Bureaucracy (INT)')">-</button>
+									</td>
+									
+									<td id="Bureaucracy (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Bureaucracy (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Business <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Business (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Business (INT)')">-</button>
+									</td>
+									
+									<td id="Business (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Business (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Composition <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Composition (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Composition (INT)')">-</button>
+									</td>
+									
+									<td id="Composition (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Composition (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Criminology <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Criminology (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Criminology (INT)')">-</button>
+									</td>
+									
+									<td id="Criminology (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Criminology (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Cryptography <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Cryptography (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Cryptography (INT)')">-</button>
+									</td>
+									
+									<td id="Cryptography (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Cryptography (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Deduction <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Deduction (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Deduction (INT)')">-</button>
+									</td>
+									
+									<td id="Deduction (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Deduction (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Education <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Education (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Education (INT)')">-</button>
+									</td>
+									
+									<td id="Education (INT) Rank">2</td>
+									<td name="intTotal">2</td>
+									<td id="Education (INT) Base" name="intBase">4</td>
+								</tr>
+								<tr>
+									<td>Gamble <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Gamble (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Gamble (INT)')">-</button>
+									</td>
+									
+									<td id="Gamble (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Gamble (INT) Base" name="intBase">2</td>
+								</tr>
+							</table>
+						</td>
+
+						<td>
+							<!--SKILLS COLUMN 2-->
+							<table>
+								<!--EDUCATION SKILLS-->
+								<tr>
+									<th>Education Skills</th>
+									<th> </th>
+									<th> </th>
+									<th>LVL</th>
+									<th>STAT</th>
+									<th>BASE</th>
+								</tr>
+								<tr>
+									<td>Language <b>(INT)</b></td>
+								</tr>
+								<tr>
+									<td>- - > <b>STREETSLANG</b></td>
+									<td>
+										<button onclick="incrementSkill('Streetslang (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Streetslang (INT)')">-</button>
+									</td>
+									
+									<td id="Streetslang (INT) Rank">2</td>
+									<td name="intTotal">2</td>
+									<td id="Streetslang (INT) Base" name="intBase">4</td>
+								</tr>
+								<tr>
+									<td>- - > Language 1</td>
+									<td>
+										<button onclick="incrementSkill('Language 1 (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Language 1 (INT)')">-</button>
+									</td>
+									
+									<td id="Language 1 (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Language 1 (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>- - > Language 2</td>
+									<td>
+										<button onclick="incrementSkill('Language 2 (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Language 2 (INT)')">-</button>
+									</td>
+									
+									<td id="Language 2 (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Language 2 (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Library Search <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Library Search (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Library Search (INT)')">-</button>
+									</td>
+									
+									<td id="Library Search (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Library Search (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Local Expert <b>(INT)</b></td>
+								</tr>
+								<tr>
+									<td>- - > <b>YOUR HOME</b></td>
+									<td>
+										<button onclick="incrementSkill('Your Home (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Your Home (INT)')">-</button>
+									</td>
+									
+									<td id="Your Home (INT) Rank">2</td>
+									<td name="intTotal">2</td>
+									<td id="Your Home (INT) Base" name="intBase">4</td>
+								</tr>
+								<tr>
+									<td>- - > Location 1</td>
+									<td>
+										<button onclick="incrementSkill('Location 1 (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Location 1 (INT)')">-</button>
+									</td>
+									
+									<td id="Location 1 (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Location 1 (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>- - > Location 2</td>
+									<td>
+										<button onclick="incrementSkill('Location 2 (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Location 2 (INT)')">-</button>
+									</td>
+									
+									<td id="Location 2 (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Location 2 (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Science <b>(INT)</b></td>
+								</tr>
+								<tr>
+									<td>- - > Field 1</td>
+									<td>
+										<button onclick="incrementSkill('Field 1 (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Field 1 (INT)')">-</button>
+									</td>
+									
+									<td id="Field 1 (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Field 1 (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>- - > Field 2</td>
+									<td>
+										<button onclick="incrementSkill('Field 2 (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Field 2 (INT)')">-</button>
+									</td>
+									
+									<td id="Field 2 (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Field 2 (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Tactics <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Tactics (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Tactics (INT)')">-</button>
+									</td>
+									
+									<td id="Tactics (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Tactics (INT) Base" name="intBase">2</td>
+								</tr>
+								<tr>
+									<td>Wilderness Survival <b>(INT)</b></td>
+									<td>
+										<button onclick="incrementSkill('Wilderness Survival (INT)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Wilderness Survival (INT)')">-</button>
+									</td>
+									
+									<td id="Wilderness Survival (INT) Rank">0</td>
+									<td name="intTotal">2</td>
+									<td id="Wilderness Survival (INT) Base" name="intBase">2</td>
+								</tr>
+
+								<!--FIGHTING SKILLS-->
+								<tr>
+									<th>Fighting Skills</th>
+									<th> </th>
+									<th> </th>
+									<th>LVL</th>
+									<th>STAT</th>
+									<th>BASE</th>
+								</tr>
+								<tr>
+									<td><b>BRAWLING (DEX)</b></td>
+									<td>
+										<button onclick="incrementSkill('Brawling (DEX)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Brawling (DEX)')">-</button>
+									</td>
+									
+									<td id="Brawling (DEX) Rank">2</td>
+									<td name="dexTotal">2</td>
+									<td id="Brawling (DEX) Base" name="dexBase">4</td>
+								</tr>
+								<tr>
+									<td><b>EVASION (DEX)</b></td>
+									<td>
+										<button onclick="incrementSkill('Evasion (DEX)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Evasion (DEX)')">-</button>
+									</td>
+									
+									<td id="Evasion (DEX) Rank">2</td>
+									<td name="dexTotal">2</td>
+									<td id="Evasion (DEX) Base" name="dexBase">4</td>
+								</tr>
+								<tr>
+									<td>Martial Arts (x2) <b>(DEX)</b></td>
+									<td>
+										<button onclick="incrementSkill('Martial Arts (x2) (DEX)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Martial Arts (x2) (DEX)')">-</button>
+									</td>
+									
+									<td id="Martial Arts (x2) (DEX) Rank">0</td>
+									<td name="dexTotal">2</td>
+									<td id="Martial Arts (x2) (DEX) Base" name="dexBase">2</td>
+								</tr>
+								<tr>
+									<td>Melee Weapon <b>(DEX)</b></td>
+									<td>
+										<button onclick="incrementSkill('Melee Weapon (DEX)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Melee Weapon (DEX)')">-</button>
+									</td>
+									
+									<td id="Melee Weapon (DEX) Rank">0</td>
+									<td name="dexTotal">2</td>
+									<td id="Melee Weapon (DEX) Base" name="dexBase">2</td>
+								</tr>
+
+								<!--PERFORMANCE SKILLS-->
+								<tr>
+									<th>Performance Skills</th>
+									<th> </th>
+									<th> </th>
+									<th>LVL</th>
+									<th>STAT</th>
+									<th>BASE</th>
+								</tr>
+								<tr>
+									<td>Acting <b>(COOL)</b></td>
+									<td>
+										<button onclick="incrementSkill('Acting (COOL)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Acting (COOL)')">-</button>
+									</td>
+									
+									<td id="Acting (COOL) Rank">0</td>
+									<td name="coolTotal">2</td>
+									<td id="Acting (COOL) Base" name="coolBase">2</td>
+								</tr>
+								<tr>
+									<td>Play Instrument <b>(TECH)</b></td>
+								</tr>
+								<tr>
+									<td>- - > Instrument 1</td>
+									<td>
+										<button onclick="incrementSkill('Instrument 1 (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Instrument 1 (TECH)')">-</button>
+									</td>
+									
+									<td id="Instrument 1 (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Instrument 1 (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td>- - > Instrument 2</td>
+									<td>
+										<button onclick="incrementSkill('Instrument 2 (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Instrument 2 (TECH)')">-</button>
+									</td>
+									
+									<td id="Instrument 2 (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Instrument 2 (TECH) Base" name="techBase">2</td>
+								</tr>
+
+								<!--RANGED WEAPON SKILLS-->
+								<tr>
+									<th>Ranged Weapon Skills</th>
+									<th> </th>
+									<th> </th>
+									<th>LVL</th>
+									<th>STAT</th>
+									<th>BASE</th>
+								</tr>
+								<tr>
+									<td>Archery <b>(REF)</b></td>
+									<td>
+										<button onclick="incrementSkill('Archery (REF)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Archery (REF)')">-</button>
+									</td>
+									
+									<td id="Archery (REF) Rank">0</td>
+									<td name="refTotal">2</td>
+									<td id="Archery (REF) Base" name="refBase">2</td>
+								</tr>
+								<tr>
+									<td>Autofire (x2) <b>(REF)</b></td>
+									<td>
+										<button onclick="incrementSkill('Autofire (x2) (REF)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Autofire (x2) (REF)')">-</button>
+									</td>
+									
+									<td id="Autofire (x2) (REF) Rank">0</td>
+									<td name="refTotal">2</td>
+									<td id="Autofire (x2) (REF) Base" name="refBase">2</td>
+								</tr>
+								<tr>
+									<td>Handgun <b>(REF)</b></td>
+									<td>
+										<button onclick="incrementSkill('Handgun (REF)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Handgun (REF)')">-</button>
+									</td>
+									
+									<td id="Handgun (REF) Rank">0</td>
+									<td name="refTotal">2</td>
+									<td id="Handgun (REF) Base" name="refBase">2</td>
+								</tr>
+							</table>
+						</td>
+
+						<td>
+							<!--SKILLS COLUMN 3-->
+							<table>
+								<!--RANGED WEAPON SKILLS-->
+								<tr>
+									<th>Ranged Weapon Skills</th>
+									<th> </th>
+									<th> </th>
+									<th>LVL</th>
+									<th>STAT</th>
+									<th>BASE</th>
+								</tr>
+								<tr>
+									<td>Heavy Weapons (x2) <b>(REF)</b></td>
+									<td>
+										<button onclick="incrementSkill('Heavy Weapons (x2) (REF)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Heavy Weapons (x2) (REF)')">-</button>
+									</td>
+									
+									<td id="Heavy Weapons (x2) (REF) Rank">0</td>
+									<td name="refTotal">2</td>
+									<td id="Heavy Weapons (x2) (REF) Base" name="refBase">2</td>
+								</tr>
+								<tr>
+									<td>Shoulder Arms <b>(REF)</b></td>
+									<td>
+										<button onclick="incrementSkill('Shoulder Arms (REF)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Shoulder Arms (REF)')">-</button>
+									</td>
+									
+									<td id="Shoulder Arms (REF) Rank">0</td>
+									<td name="refTotal">2</td>
+									<td id="Shoulder Arms (REF) Base" name="refBase">2</td>
+								</tr>
+
+								<!--SOCIAL SKILLS-->
+								<tr>
+									<th>Social Skills</th>
+									<th> </th>
+									<th> </th>
+									<th>LVL</th>
+									<th>STAT</th>
+									<th>BASE</th>
+								</tr>
+								<tr>
+									<td>Bribery <b>(COOL)</b></td>
+									<td>
+										<button onclick="incrementSkill('Bribery (COOL)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Bribery (COOL)')">-</button>
+									</td>
+									
+									<td id="Bribery (COOL) Rank">0</td>
+									<td name="coolTotal">2</td>
+									<td id="Bribery (COOL) Base" name="coolBase">2</td>
+								</tr>
+								<tr>
+									<td><b>CONVERSATION (EMP)</b></td>
+									<td>
+										<button onclick="incrementSkill('Conversation (EMP)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Conversation (EMP)')">-</button>
+									</td>
+									
+									<td id="Conversation (EMP) Rank">2</td>
+									<td name="empTotal">2</td>
+									<td id="Conversation (EMP) Base" name="empBase">4</td>
+								</tr>
+								<tr>
+									<td><b>HUMAN PERCEPTION (EMP)</b></td>
+									<td>
+										<button onclick="incrementSkill('Human Perception (EMP)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Human Perception (EMP)')">-</button>
+									</td>
+									
+									<td id="Human Perception (EMP) Rank">2</td>
+									<td name="empTotal">2</td>
+									<td id="Human Perception (EMP) Base" name="empBase">4</td>
+								</tr>
+								<tr>
+									<td>Interrogation <b>(COOL)</b></td>
+									<td>
+										<button onclick="incrementSkill('Interrogation (COOL)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Interrogation (COOL)')">-</button>
+									</td>
+									
+									<td id="Interrogation (COOL) Rank">0</td>
+									<td name="coolTotal">2</td>
+									<td id="Interrogation (COOL) Base" name="coolBase">2</td>
+								</tr>
+								<tr>
+									<td><b>PERSUASION (COOL)</b></td>
+									<td>
+										<button onclick="incrementSkill('Persuasion (COOL)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Persuasion (COOL)')">-</button>
+									</td>
+									
+									<td id="Persuasion (COOL) Rank">2</td>
+									<td name="coolTotal">2</td>
+									<td id="Persuasion (COOL) Base" name="coolBase">4</td>
+								</tr>
+								<tr>
+									<td>Personal Grooming <b>(COOL)</b></td>
+									<td>
+										<button onclick="incrementSkill('Personal Grooming (COOL)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Personal Grooming (COOL)')">-</button>
+									</td>
+									
+									<td id="Personal Grooming (COOL) Rank">0</td>
+									<td name="coolTotal">2</td>
+									<td id="Personal Grooming (COOL) Base" name="coolBase">2</td>
+								</tr>
+								<tr>
+									<td>Streetwise <b>(COOL)</b></td>
+									<td>
+										<button onclick="incrementSkill('Streetwise (COOL)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Streetwise (COOL)')">-</button>
+									</td>
+									
+									<td id="Streetwise (COOL) Rank">0</td>
+									<td name="coolTotal">2</td>
+									<td id="Streetwise (COOL) Base" name="coolBase">2</td>
+								</tr>
+								<tr>
+									<td>Trading <b>(COOL)</b></td>
+									<td>
+										<button onclick="incrementSkill('Trading (COOL)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Trading (COOL)')">-</button>
+									</td>
+									
+									<td id="Trading (COOL) Rank">0</td>
+									<td name="coolTotal">2</td>
+									<td id="Trading (COOL) Base" name="coolBase">2</td>
+								</tr>
+								<tr>
+									<td>Wardrobe & Style <b>(COOL)</b></td>
+									<td>
+										<button onclick="incrementSkill('Wardrobe & Style (COOL)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Wardrobe & Style (COOL)')">-</button>
+									</td>
+									
+									<td id="Wardrobe & Style (COOL) Rank">0</td>
+									<td name="coolTotal">2</td>
+									<td id="Wardrobe & Style (COOL) Base" name="coolBase">2</td>
+								</tr>
+
+								<!--TECHNIQUE SKILLS-->
+								<tr>
+									<th>Technique Skills</th>
+									<th> </th>
+									<th> </th>
+									<th>LVL</th>
+									<th>STAT</th>
+									<th>BASE</th>
+								</tr>
+								<tr>
+									<td>Air Vehicle Tech <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Air Vehicle Tech (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Air Vehicle Tech (TECH)')">-</button>
+									</td>
+									
+									<td id="Air Vehicle Tech (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Air Vehicle Tech (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td>Basic Tech <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Basic Tech (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Basic Tech (TECH)')">-</button>
+									</td>
+									
+									<td id="Basic Tech (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Basic Tech (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td>Cybertech <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Cybertech (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Cybertech (TECH)')">-</button>
+									</td>
+									
+									<td id="Cybertech (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Cybertech (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td>Demolitions (x2) <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Demolitions (x2) (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Demolitions (x2) (TECH)')">-</button>
+									</td>
+									
+									<td id="Demolitions (x2) (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Demolitions (x2) (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td>Electronics/Security Tech (x2) <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Electronics/Security Tech (x2) (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Electronics/Security Tech (x2) (TECH)')">-</button>
+									</td>
+									
+									<td id="Electronics/Security Tech (x2) (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Electronics/Security Tech (x2) (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td><b>FIRST AID (TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('First Aid (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('First Aid (TECH)')">-</button>
+									</td>
+									
+									<td id="First Aid (TECH) Rank">2</td>
+									<td name="techTotal">2</td>
+									<td id="First Aid (TECH) Base" name="techBase">4</td>
+								</tr>
+								<tr>
+									<td>Forgery <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Forgery (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Forgery (TECH)')">-</button>
+									</td>
+									
+									<td id="Forgery (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Forgery (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td>Land Vehicle Tech <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Land Vehicle Tech (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Land Vehicle Tech (TECH)')">-</button>
+									</td>
+									
+									<td id="Land Vehicle Tech (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Land Vehicle Tech (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td>Paint/Draw/Sculpt <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Paint/Draw/Sculpt (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Paint/Draw/Sculpt (TECH)')">-</button>
+									</td>
+									
+									<td id="Paint/Draw/Sculpt (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Paint/Draw/Sculpt (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td>Paramedic (x2) <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Paramedic (x2) (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Paramedic (x2) (TECH)')">-</button>
+									</td>
+									
+									<td id="Paramedic (x2) (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Paramedic (x2) (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td>Photography/Film <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Photography/Film (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Photography/Film (TECH)')">-</button>
+									</td>
+									
+									<td id="Photography/Film (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Photography/Film (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td>Pick Lock <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Pick Lock (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Pick Lock (TECH)')">-</button>
+									</td>
+									
+									<td id="Pick Lock (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Pick Lock (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td>Pick Pocket <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Pick Pocket (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Pick Pocket (TECH)')">-</button>
+									</td>
+									
+									<td id="Pick Pocket (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Pick Pocket (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td>Sea Vehicle Tech <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Sea Vehicle Tech (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Sea Vehicle Tech (TECH)')">-</button>
+									</td>
+									
+									<td id="Sea Vehicle Tech (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Sea Vehicle Tech (TECH) Base" name="techBase">2</td>
+								</tr>
+								<tr>
+									<td>Weaponstech <b>(TECH)</b></td>
+									<td>
+										<button onclick="incrementSkill('Weaponstech (TECH)')">+</button>
+									</td>
+									<td>
+										<button onclick="decrementSkill('Weaponstech (TECH)')">-</button>
+									</td>
+									
+									<td id="Weaponstech (TECH) Rank">0</td>
+									<td name="techTotal">2</td>
+									<td id="Weaponstech (TECH) Base" name="techBase">2</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<!--BUY STUFF-->
+			<div class="wrapper">
+				<div>
+					<h2>BUY YOUR STUFF</h2>
+					<h3 id="Funds">2550 eb</h3>
+					<h3>Inventory</h3>
+					<div id="InventoryList"></div>
+				</div>
 				
-				<section class = "chargen">
-					<h2>Complete Packages (Calculated):</h2>
-					<p>
-						The Calculated method is by far the most
-						complex way to make a Cyberpunk RED Character. Yet the reward is the ability to
-						create a Character that is exactly what you want, using pools of points to buy Statistics
-						and Skills and starting money to buy weapons, armor, gear, and cyberware.
-					</p>
-					<a href="completeChargen.html"><button>BECOME COMPLETE</button></a>
-					
-				</section>
-			</section>
+				<div>
+					<h2>GEAR</h2>
+					<h3>MELEE WEAPONS</h3>
+					<table>
+						<tr>
+							<th>Melee Weapon Type</th>
+							<th>Examples</th>
+							<th># Hands Required</th>
+							<th>Damage</th>
+							<th>RoF</th>
+							<th>Concealable?</th>
+							<th>COST</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
+						<tr>
+							<td><b>Light Melee Weapon</b></td>
+							<td>Combat Knife, Tomahawk</td>
+							<td>Varies by type</td>
+							<td>1d6</td>
+							<td>2</td>
+							<td>YES</td>
+							<td>50 eb (Costly)</td>
+							<td>
+								<button onclick="purchase('Light Melee Weapon', 50)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Light Melee Weapon', 50)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Medium Melee Weapon</b></td>
+							<td>Baseball Bat, Crowbar, Machete</td>
+							<td>Varies by type</td>
+							<td>2d6</td>
+							<td>2</td>
+							<td>NO</td>
+							<td>50 eb (Costly)</td>
+							<td>
+								<button onclick="purchase('Medium Melee Weapon', 50)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Medium Melee Weapon', 50)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Heavy Melee Weapon</b></td>
+							<td>Lead Pipe, Sword, Spiked Bat</td>
+							<td>Varies by type</td>
+							<td>3d6</td>
+							<td>2</td>
+							<td>NO</td>
+							<td>100 eb (Premium)</td>
+							<td>
+								<button onclick="purchase('Heavy Melee Weapon', 100)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Heavy Melee Weapon', 100)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Very Heavy Melee Weapon</b></td>
+							<td>Chainsaw, Sledgehammer, Helicopter Blades, Naginata</td>
+							<td>Varies by type</td>
+							<td>4d6</td>
+							<td>1</td>
+							<td>NO</td>
+							<td>500 eb (Expensive)</td>
+							<td>
+								<button onclick="purchase('Very Heavy Melee Weapon', 500)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Very Heavy Melee Weapon', 500)">-</button>
+							</td>
+						</tr>
+					</table>
+	
+					<h3>RANGED WEAPONS</h3>
+					<h3>WEAPON ATTACHMENTS</h3>
+					<h3>AMMUNITION</h3>
+					<h3>EXOTIC WEAPONS</h3>
+					<h3>ARMOR</h3>
+					<h3>GENERAL GEAR</h3>
+					<h3>fASHION</h3>
+					<h3>STREET DRUGS</h3>
+					<h3>CYBERWARE</h3>
+					<h3>CYBERDECK HARDWARE</h3>
+					<h3>PROGRAMS</h3>
+					<h3>HOME DEFENSES</h3>
+					<h3>SERVICES & ENTERTAINMENT</h3>
+					<h3>LIFESTYLE & HOUSING</h3>
+				</div>
+			</div>
+			
+			
+			
 		</div>
 		<script src="script.js"></script>
 	</body>
