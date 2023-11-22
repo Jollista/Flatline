@@ -278,7 +278,7 @@ function isRequired(skillName)
 	BUY YOUR GEAR
  */
 
-var funds = 2550;
+var funds = 2550+800;
 var soulValue = 1500;
 var inventory = new Map();
 
