@@ -1690,6 +1690,7 @@
 				<div>
 					<h2>BUY YOUR STUFF</h2>
 					<h3 id="Funds">2550 eb</h3>
+					<h3 id="Humanity">20 / 20 HUM</h3>
 					<h3>Inventory</h3>
 					<div id="InventoryList"></div>
 				</div>
@@ -1703,7 +1704,7 @@
 							<th>Examples</th>
 							<th># Hands Required</th>
 							<th>Damage</th>
-							<th>RoF</th>
+							<th>Rate of Fire (ROF)</th>
 							<th>Concealable?</th>
 							<th>COST</th>
 							<th>BUY</th>
@@ -1772,19 +1773,368 @@
 					</table>
 	
 					<h3>RANGED WEAPONS</h3>
+					<table>
+						<tr>
+							<th>Weapon Type</th>
+							<th>Weapon Skill</th>
+							<th>Single Shot Damage</th>
+							<th>Standard Magazine</th>
+							<th>Rate of Fire (ROF)</th>
+							<th>Hands Required</th>
+							<th>Concealable?</th>
+							<th>Alt. Fire & Features </th>
+							<th>COST</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
+						<tr>
+							<td><b>Medium Pistol</b></td>
+							<td>Handgun</td>
+							<td>2d6</td>
+							<td>12 (M Pistol)</td>
+							<td>2</td>
+							<td>1</td>
+							<td>YES</td>
+							<td>None</td>
+							<td>50 eb (Costly)</td>
+							<td>
+								<button onclick="purchase('Medium Pistol', 50)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Medium Pistol', 50)">-</button>
+							</td>
+						</tr>
+					</table>
+
 					<h3>WEAPON ATTACHMENTS</h3>
+					<table>
+						<tr>
+							<th>Attachment</th>
+							<th>Eligible Weapons</th>
+							<th>Description</th>
+							<th>COST</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
+						<tr>
+							<td>Bayonet</td>
+							<td>All Non-Exotic Ranged Weapons fired with the Shoulder Arms Skill.</td>
+							<td>When wielded, this weapon can also be used as a Light Melee Weapon. While this is attached to a weapon, it cannot be concealed under clothing.</td>
+							<td>100 eb (Premium)</td>
+							<td>
+								<button onclick="purchase('Bayonet', 100)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Bayonet', 100)">-</button>
+							</td>
+						</tr>
+					</table>
+
 					<h3>AMMUNITION</h3>
+					<table>
+						<tr>
+							<th>Ammunition</th>
+							<th>Ammunition Types Available</th>
+							<th>Description</th>
+							<th>COST</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
+						<tr>
+							<td>Basic Ammunition</td>
+							<td>All except Grenades and Rockets.</td>
+							<td>This is the standard ammunition for the weapon. It has no special features.</td>
+							<td>10 eb (Cheap)</td>
+							<td>
+								<button onclick="purchase('Basic Ammunition', 10)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Basic Ammunition', 10)">-</button>
+							</td>
+						</tr>
+					</table>
+
 					<h3>EXOTIC WEAPONS</h3>
+					<table>
+						<tr>
+							<th>Weapon</th>
+							<th>Description</th>
+							<th>COST</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
+						<tr>
+							<td>Air Pistol</td>
+							<td>An Exotic Medium Pistol. Fires paint balls, which are typically filled with paint, and thus deal no damage.
+								If you filled the paint balls with Acid however, each Acid Paintball still deals no damage, but lowers the SP
+								of the target's armor (worn in the location shot) by one with each successful hit. Great for trying to capture
+								someone alive. Damage dealt by this weapon cannot cause a Critical Injury. Ammunition costs the same as
+								for a normal Medium Pistol, even if filled with Acid.
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>
+								<button onclick="purchase('Air Pistol', 100)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Air Pistol', 100)">-</button>
+							</td>
+						</tr>
+					</table>
+
 					<h3>ARMOR</h3>
+					<table>
+						<tr>
+							<th>Armor Type</th>
+							<th>Stopping Power (SP)</th>
+							<th>Armor Penalty (Min 0)</th>
+							<th>Description</th>
+							<th>COST</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
+						<tr>
+							<td>Leathers</td>
+							<td>4</td>
+							<td>None</td>
+							<td>Thin leather with reinforced pads at shoulders, hips, and gut. Favored by Nomads and other 'punks who ride
+								bikes. This also includes all those road-warrior wannabes wearing open-butt chaps and random sports equipment.</td>
+							<td>20 eb (Everyday)</td>
+							<td>
+								<button onclick="purchase('Leathers', 20)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Leathers', 20)">-</button>
+							</td>
+						</tr>
+					</table>
+
 					<h3>GENERAL GEAR</h3>
-					<h3>fASHION</h3>
+					<table>
+						<tr>
+							<th>Item</th>
+							<th>Description</th>
+							<th>COST</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
+						<tr>
+							<td>Agent</td>
+							<td>
+								Self-adaptive-AI powered smartphone; that
+								"learns" how best to fit your needs simply by inter-
+								acting with you. While not a true AI, it is more than
+								capable of replacing any need for a secretary. When
+								you sit back and allow your Agent to manage your
+								life, everything is easier, including making sure you
+								have time to do what you need to do (crimes, killing
+								people, getting away with it, and so forth) instead of
+								going to the store to get something you forgot. There
+								are many reasons why almost everyone has one.
+								Things your Agent can do:
+								
+								<ul>
+									<li>
+										Make phone calls in voice or video and record
+										them, forward them, or send them to voicemail,
+										which pretty much only Agents actually end up
+										listening to nowadays.
+									</li>
+									<li>
+										Surf the Data Pool.
+									</li>
+									<li>
+										Scan the Data Pool to locate a known location
+										and bring up directions.
+									</li>
+									<li>
+										Keep your schedule for you and act inde-
+										pendently on events, like ordering a gift and
+										having it delivered to the recipient.
+									</li>
+									<li>
+										Maintain a personality complete with name,
+										voice, and virtual body. Some particularly lonely
+										individuals reprogram their Agents to act as sur-
+										rogate lovers or friends.
+									</li>
+									<li>
+										Suggest clothes for you to buy.
+									</li>
+									<li>
+										Record audio and video to the Agent's standard
+										Memory Chip.
+									</li>
+									<li>
+										Link to your Cyberware to share data storage with
+										them and the Agent's Memory Chip.
+									</li>
+									<li>
+										Link to most appliances in your living space.
+									</li>
+									<li>
+										Monitor your use of easily acquired resources
+										(Cheap, Everyday, or Costly) and automatically
+										reorder them when you get low at market price.
+									</li>
+									<li>
+										Recommend a future course of action based on
+										your personal goals. AI may suggest unwise
+										actions.
+									</li>
+								</ul>
+
+								In addition to all this, <b>an Agent gives the user +2
+								to their Library Search Skill and +2 to their
+								Wardrobe & Style Skill</b>, but only if you wear the
+								clothes your Agent suggests for you, which change
+								every season. Multiple Agents don't multiply these
+								bonuses.
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>
+								<button onclick="purchase('Agent', 100)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Agent', 100)">-</button>
+							</td>
+						</tr>
+					</table>
+
 					<h3>STREET DRUGS</h3>
+					<table>
+						<tr>
+							<th>Drug</th>
+							<th>Primary Effect</th>
+							<th>Secondary Effect</th>
+							<th>COST</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
+						<tr>
+							<td>Black Lace</td>
+							<td>
+								<ul>
+									<li>Lasts 24 Hours.</li>
+									<li>
+										User takes 2d6 Humanity Loss upon taking a
+										dose, which is returned if the user isn't affected
+										by Black Lace's Secondary Effect.
+									</li>
+									<li>
+										For the duration of the Primary Effect, the user
+										ignores the effects of the Seriously Wounded
+										Wound State.
+									</li>
+								</ul>
+							</td>
+							<td>
+								<ul>
+									<li>DV 17</li>
+									<li>
+										Humanity Loss from Primary Effect isn't returned.
+									</li>
+									<li>
+										If the user wasn't already addicted to Black
+										Lace, they are now. While addicted, unless
+										the user is currently experiencing the Primary
+										Effect of Black Lace, their REF is lowered by
+										2 points.
+									</li>
+								</ul>
+							</td>
+							<td>50 eb (Costly)</td>
+							<td>
+								<button onclick="purchase('Black Lace', 50)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Black Lace', 50)">-</button>
+							</td>
+						</tr>
+					</table>
+
 					<h3>CYBERWARE</h3>
+					<h4>FASHIONWARE (7 Fashionware Option Slots Available)</h4>
+					<table>
+
+					</table>
+					<h4>NEURALWARE (Foundational Cyberware: Neural Link)</h4>
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Install</th>
+							<th>Description & Data</th>
+							<th>COST</th>
+							<th>HL</th>
+							<th>BUY</th>
+							<th>SELL</th>
+						</tr>
+						<tr>
+							<td>Neural Link</td>
+							<td>Clinic</td>
+							<td>
+								Wired artificial nervous system, required to use Neuralware, and Subdermal Grips.
+								System has 5 Option Slots for Neuralware options.
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>7 (2d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Neural Link', 500, 7)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Neural Link', 500, 7)">-</button>
+							</td>
+						</tr>
+					</table>
+
+					<h4>CYBEROPTICS (Foundational Cyberware: Cybereye)</h4>
+					<table>
+
+					</table>
+					<h4>CYBERAUDIO (Foundational Cyberware: Cyberaudio Suite)</h4>
+					<table>
+
+					</table>
+					<h4>INTERNAL BODY CYBERWARE (7 Internal Body Option Slots Available)</h4>
+					<table>
+
+					</table>
+					<h4>EXTERNAL BODY CYBERWARE (7 External Body Option Slots Available)</h4>
+					<table>
+
+					</table>
+					<h4>CYBERLIMBS</h4>
+					<table>
+
+					</table>
+					<h4>BORGWARE</h4>
+					<table>
+
+					</table>
+
 					<h3>CYBERDECK HARDWARE</h3>
+					<table>
+
+					</table>
+
 					<h3>PROGRAMS</h3>
+					<table>
+
+					</table>
+
 					<h3>HOME DEFENSES</h3>
+					<table>
+
+					</table>
+
 					<h3>SERVICES & ENTERTAINMENT</h3>
+					<table>
+
+					</table>
+
 					<h3>LIFESTYLE & HOUSING</h3>
+					<table>
+
+					</table>
 				</div>
 			</div>
 			

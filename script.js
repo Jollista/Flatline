@@ -47,6 +47,8 @@ skills.set('First Aid (TECH)', 2);
 var maxSkillPoints = 86;
 var remSkillPoints = 60;
 
+var humanity = 10 * stats.get("EMP")
+
 /*
 	STEP 1: SELECT A ROLE
 */
@@ -107,6 +109,9 @@ function incrementStat(statName)
 	document.getElementsByName(statName.toLowerCase()+"Base").forEach(function(ele, idx) {
 		ele.textContent -= -1;
 	});
+	//update humanity
+	humanity = stats.get("EMP")*10;
+	document.getElementById("Humanity").innerText= humanity + " / " + (stats.get("EMP")*10);
 }
 
 //decrease the rank of a stat by 1
@@ -140,6 +145,9 @@ function decrementStat(statName)
 	document.getElementsByName(statName.toLowerCase()+"Base").forEach(function(ele, idx) {
 		ele.textContent -= 1;
 	});
+	//update humanity
+	humanity = stats.get("EMP")*10;
+	document.getElementById("Humanity").innerText= humanity + " / " + (stats.get("EMP")*10);
 }
 
 /*
@@ -302,6 +310,8 @@ function purchase (item, cost)
 	updateGearDisplay();
 	//update funds
 	document.getElementById("Funds").innerText=funds+" eb";
+
+	return true;
 }
 
 function sell (item, cost) 
@@ -322,4 +332,30 @@ function sell (item, cost)
 	updateGearDisplay();
 	//update funds
 	document.getElementById("Funds").innerText=funds+" eb";
+
+	return true;
+}
+
+function purchaseCyberware (item, ebCost, humCost) 
+{
+	//don't buy if exceeds humanity
+	if (humCost >= humanity)
+		return;
+
+	//remove humanity
+	if (purchase(item, ebCost))
+		humanity -= humCost;
+
+	//update humanity display
+	document.getElementById("Humanity").innerText= humanity + " / " + (stats.get("EMP")*10);
+}
+
+function sellCyberware (item, ebCost, humCost) 
+{
+	//remove humanity
+	if (sell(item, ebCost))
+		humanity += humCost;
+
+	//update humanity display
+	document.getElementById("Humanity").innerText= humanity + " / " + (stats.get("EMP")*10) + " HUM";
 }
