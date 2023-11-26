@@ -4989,6 +4989,520 @@
 							<th>BUY</th>
 							<th>SELL</th>
 						</tr>
+						<tr>
+							<td><b>Cyberarm</b></td>
+							<td>Hospital</td>
+							<td>Replacement arm. Does not have to be paired. A Cyberarm has 4 Option Slots for
+								Cyberarm or Cyberlimb Options, and each comes pre-installed with a Standard
+								Hand that doesn't cost any Humanity Loss or take up a Cyberarm Option Slot.
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>7 (2d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Cyberarm', 500, 7)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Cyberarm', 500, 7)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Standard Hand</b></td>
+							<td>Clinic</td>
+							<td>Resembles a normal hand. If installed into a meat arm, a standard hand doesn't
+								count towards the number of pieces of cyberware installed in a meat arm. Doesn't
+								take up a Cyberarm Option Slot.
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>2 (1d6/2 Round up)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Standard Hand', 100, 2)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Standard Hand', 100, 2)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Big Knucks</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. Armored knuckles. A Medium Melee Weapon (2d6 damage,
+								2 ROF) that can be successfully concealed without a Check. When wielded as a
+								weapon, user can't hold anything in this arm's hand. Can be installed as the only
+								piece of Cyberware in a meat arm.
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Big Knucks', 100, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Big Knucks', 100, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Cyberdeck</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. Cyberdeck permanently installed into the user's Cyberarm. A
+								Cyberdeck must be provided by the user at the time of installation. In addition to
+								never accidentally misplacing your Cyberdeck, integration into a Cyberarm gives any
+								Cyberdeck 1 extra slot that can be used for either Programs or Hardware. This is a
+								permanent upgrade. Attempting to uninstall the Cyberdeck from the Cyberarm
+								breaks it beyond repair, but any Programs or Hardware on it could be easily
+								recovered. Requires a Cyberarm and takes 3 Option Slots.
+								<br>Cyberdeck still requires Interface Plugs and Neural Link to be operated by the user.
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Cyberdeck', 500, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Cyberdeck', 500, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Grapple Hand</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. User, as an Action, can fire a rocket propelled grapple that will
+								attach securely to any Thick cover up to 30m/yds away. Line can only support two
+								times the user's body weight, and has 10 HP.
+								<br>The user negates the normal movement penalty for climbing when they climb this
+								line, and can retract the line without an Action, including as they climb. When used
+								as a grapple, user can't hold anything in this arm's hand. Ineffective as a weapon
+								and cannot be used to make the Grab Action. <b>Requires a Cyberarm.</b>
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Grapple Hand', 100, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Grapple Hand', 100, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Medscanner</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. Scanner with external probes and contacts diagnoses injury and
+								illness, assisting user in medical emergencies not requiring the Surgery Skill. User
+								adds +2 to their First Aid and Paramedic Skills. <b>Requires a Cyberarm and takes
+									2 Option Slots.</b>
+								Multiple installations of this option provide user no additional benefit.
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>7 (2d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Medscanner', 500, 7)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Medscanner', 500, 7)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Popup Grenade Launcher</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. A One-Handed Grenade Launcher with only a single grenade in its
+								magazine that is incompatible with all Weapon Attachments except Smartgun Link is
+								installed into the Cyberarm. Launcher can be successfully concealed without a Check
+								and can be drawn and stowed without an Action. While the weapon is "popped up,"
+								the user can't hold anything in this arm's hand. 
+								<b>Requires a Cyberarm and takes 2 Option Slots.</b>
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>7 (2d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Popup Grenade Launcher', 500, 7)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Popup Grenade Launcher', 500, 7)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Popup Melee Weapon</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option A One-Handed Light, Medium, or Heavy Melee Weapon (that need
+								not be concealable before its installation) is installed in a Cyberarm so that it can
+								be successfully concealed without a roll, and can be drawn and stowed without an
+								Action. While the weapon is "popped up," the user can't hold anything in this arm's
+								hand. <b>Requires a Cyberarm and takes 2 Option Slots.</b>
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>7 (2d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Popup Melee Weapon', 500, 7)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Popup Melee Weapon', 500, 7)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Popup Shield</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. A Bulletproof Shield which is concealed while it is folded inside the
+								Cyberarm. It can be drawn or stowed without an Action, provided that the shield has
+								more than 0 HP. When extended, you can't use the Cyberarm to do anything else
+								other than serve as a shield, and you can't hold anything in that Cyberarm's hand
+								other than the shield. The Bulletproof Shield installed inside your Cyberarm is easily
+								removable and replaceable with another Bulletproof Shield, for ease of cleaning and
+								repair. <b>Requires a Cyberarm and takes 3 Option Slots.</b> See Using Shields in the
+								Combat Section on pg. 183.
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>7 (2d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Popup Shield', 500, 7)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Popup Shield', 500, 7)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Popup Ranged Weapon</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. A One-Handed Ranged Weapon (that need not be concealable
+								before its installation) provided by the user is permanently installed into the
+								Cyberarm (along with any weapon attachments attached to it) so that it can be
+								successfully concealed without a Check, and can be drawn and stowed without an
+								Action. While the weapon is “popped up,” the user can't hold anything in this arm's
+								hand. <b>Requires a Cyberarm and takes 2 Option Slots.</b>
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>7 (2d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Popup Ranged Weapon', 500, 7)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Popup Ranged Weapon', 500, 7)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Quick Change Mount</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. Cyberarm can be installed in an open socket or uninstalled with
+								an Action. The first time you install a brand new Cyberarm, whether using a Quick
+								Change Mount or otherwise, you always accrue Humanity Loss. Reattaching one
+								you've already used before with a Quick Change Mount does not do this. 
+								<b>Requires a Cyberarm.</b>
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>7 (2d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Quick Change Mount', 100, 7)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Quick Change Mount', 100, 7)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Rippers</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. Extendable Carbo-glass fingernails. A Medium Melee Weapon (2d6
+								damage, 2 ROF) that can be successfully concealed without a Check. When wielded
+								as a weapon, user can't hold anything in this arm's hand. 
+								<b>Can be installed as the only piece of Cyberware in a meat arm.</b>
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Rippers', 500, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Rippers', 500, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Scratchers</b></td>
+							<td>Mall</td>
+							<td>Cyberarm Option. Carbo-glass artificial fingernails that cut on a diagonal slice. A
+								Light Melee Weapon (1d6 damage, 2 ROF) that can be successfully concealed without
+								a Check. When wielded as a weapon, user can't hold anything in this arm's hand.
+								<b>Can be installed as the only piece of Cyberware in a meat arm.</b>
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>2 (1d6/2 Round up)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Scratchers', 100, 2)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Scratchers', 100, 2)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Shoulder Cam</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. Camera in a popup in the user's shoulder that tracks independently
+								of the user and records video and audio to an onboard Memory Chip or a linked
+								Agent. Camera can be successfully concealed without a Check and can be drawn and
+								stowed without an Action. <b>Requires a Cyberarm and takes 2 Option Slots.</b>
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>7 (2d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Shoulder Cam', 500, 7)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Shoulder Cam', 500, 7)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Slice 'N Dice</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. Monofilament whip implanted in the user's thumb. A Medium
+								Melee Weapon (2d6 damage, 2 ROF) that can be successfully concealed without a
+								Check. When wielded as a weapon, user can't hold anything in this arm's hand.
+								<b>Can be installed as the only piece of Cyberware in a meat arm.</b>
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Slice N Dice', 500, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Slice N Dice', 500, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Subdermal Grip</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. Neuralware Option. Subdermal plate under the palm allows user
+								to make use of Smartguns. A cost-effective alternative to Interface Plugs. <b>Can be
+								installed as the only piece of Cyberware in a meat arm. Requires Neural
+								Link and takes up a Neuralware Option Slot.</b>
+							</td>
+							<td>100 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Subdermal Grip', 100, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Subdermal Grip', 100, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Techscanner</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. Scanner diagnoses a wide variety of machinery and electronics,
+								assisting the user in repairs or other technical work. User adds +2 to their Basic
+								Tech, Cybertech, Land Vehicle Tech, Sea Vehicle Tech, Air Vehicle Tech, Electronics/
+								Security Tech, and Weaponstech Skills. <b>Requires a Cyberarm and takes 2 Option
+								Slots.</b> Multiple installations of this option provide user no additional benefit.
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>7 (2d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Techscanner', 500, 7)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Techscanner', 500, 7)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Tool Hand</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. Fingers contain screwdriver, wrench, small drill, etc. Never be
+								without your Techtool! <b>Can be installed as the only piece of Cyberware in a
+								meat arm.</b>
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Tool Hand', 100, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Tool Hand', 100, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Wolvers</b></td>
+							<td>Clinic</td>
+							<td>Cyberarm Option. Extendable Carbo-glass claws in the knuckles. A Heavy Melee
+								Weapon (3d6 damage, 2 ROF) that can be successfully concealed without a Check.
+								When wielded as a weapon, user can't hold anything in this arm's hand. <b>Can be
+								installed as the only piece of Cyberware in a meat arm.</b>
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>7 (2d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Wolvers', 500, 7)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Wolvers', 500, 7)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Cyberleg</b></td>
+							<td>Hospital</td>
+							<td>Replacement leg. Does not have to be paired. A Cyberleg has 3 Option Slots for
+								Cyberleg or Cyberlimb Options and each comes pre-installed with a Standard
+								Foot that doesn't cost any Humanity Loss or take up a Cyberleg Option Slot.
+								<br>Most Cyberleg options must be paired to work properly (purchased twice and
+								installed in two different Cyberlegs on a user. Humanity Loss is calculated separately
+								for each purchase).
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Cyberleg', 100, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Cyberleg', 100, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Standard Foot</b></td>
+							<td>Clinic</td>
+							<td>Resembles a normal foot. If installed into a meat leg, a Standard Foot doesn't count
+								towards the number of pieces of cyberware installed in a meat leg. Doesn't take
+								up a Cyberleg Option Slot.
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>2 (1d6/2 Round up)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Standard Foot', 100, 2)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Standard Foot', 100, 2)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Grip Foot</b></td>
+							<td>Clinic</td>
+							<td>Cyberleg Option. Feet are coated with state-of-the-art traction material. The user
+								negates the normal movement penalty for climbing. <b>Requires two Cyberlegs and
+								must be paired.</b>
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Grip Foot', 500, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Grip Foot', 500, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Jump Booster</b></td>
+							<td>Clinic</td>
+							<td>Hydraulics in legs. Negates movement penalty when jumping.
+								<br><b>Requires two Cyberlegs and
+								must be paired.</b>
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Jump Booster', 500, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Jump Booster', 500, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Skate Foot</b></td>
+							<td>Clinic</td>
+							<td>Inline skates built into feet. Can be concealed. Increases movement by 6m/yds
+								when using Run Action. <b>Requires two Cyberlegs and must be paired.</b>
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Skate Foot', 500, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Skate Foot', 500, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Talon Foot</b></td>
+							<td>Clinic</td>
+							<td>Blade mounted in foot. Light Melee Weapon. Can be concealed without a Check.
+								<b>Can be installed as the only piece of Cyberware in a meat leg.</b>
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Talon Foot', 500, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Talon Foot', 500, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Web Foot</b></td>
+							<td>Clinic</td>
+							<td>Thin webbing between toes. Negates movement penalty when swimming. 
+								<b>Requires Two Cyberlegs and must be paired.</b>
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Web Foot', 500, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Web Foot', 500, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Hardened Shielding</b></td>
+							<td>Clinic</td>
+							<td>Cyberlimb Option. Cyberlimb and installed options cannot be rendered inoperable
+								by EMP effects, like Microwaver pulses, or Non-Black ICE Program effects. <b>Requires
+								Cyberarm or Cyberleg.</b>
+							</td>
+							<td>1,000 eb (Expensive)</td>
+							<td>3 (1d6)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Hardened Shielding', 1000, 3)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Hardened Shielding', 1000, 3)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Plastic Covering</b></td>
+							<td>Clinic</td>
+							<td>Cyberlimb Option. Plastic coating for Cyberlimb. Available in wide variety of colors
+								and patterns. <b>Requires a Cyberarm or Cyberleg but does not take an Option
+								Slot.</b>
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>0 (N/A)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Hardened Shielding', 100, 0)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Hardened Shielding', 100, 0)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Realskinn™ Covering</b></td>
+							<td>Clinic</td>
+							<td>Cyberlimb Option. Artificial skin coating for Cyberlimb.
+								<b>Requires a Cyberarm or Cyberleg but does not take an Option Slot.</b>
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>0 (N/A)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Realskinn™ Covering', 500, 0)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Realskinn™ Covering', 500, 0)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Superchrome® Covering</b></td>
+							<td>Clinic</td>
+							<td>Cyberlimb Option. Shiny metallic coating for Cyberlimb. +2 to Wardrobe and Style.
+								This bonus only applies once. Requires a Cyberarm or Cyberleg but does not
+								take an Option Slot. <b>Requires a Cyberarm or Cyberleg but does not take an Option Slot.</b>
+							</td>
+							<td>1,000 eb (V. Expensive)</td>
+							<td>0 (N/A)</td>
+							<td>
+								<button onclick="purchaseCyberware('Cyber: Superchrome® Covering', 1000, 0)">+</button>
+							</td>
+							<td>
+								<button onclick="sellCyberware('Cyber: Superchrome® Covering', 1000, 0)">-</button>
+							</td>
+						</tr>
 					</table>
 
 					<h4>BORGWARE</h4>
