@@ -5738,6 +5738,65 @@
 								<button onclick="sell('Eraser', 20)">-</button>
 							</td>
 						</tr>
+						<tr>
+							<td><b>See Ya</b></td>
+							<td>Booster</td>
+							<td>0</td>
+							<td>0</td>
+							<td>7</td>
+							<td>Increases all Pathfinder Checks you make by +2 as long as this
+								Program remains Rezzed.
+							</td>
+							<td>
+								Shimmering silver magnifying glass spinning slowly in place.
+							</td>
+							<td>20 eb (Everyday)</td>
+							<td>
+								<button onclick="purchase('See Ya', 20)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('See Ya', 20)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Speedy Gonzalvez</b></td>
+							<td>Booster</td>
+							<td>0</td>
+							<td>0</td>
+							<td>7</td>
+							<td>Increases your Speed by +2 as long as this Program remains Rezzed.
+							</td>
+							<td>
+								A trail of dust appearing behind the Netrunner as they move.
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>
+								<button onclick="purchase('Speedy Gonzalvez', 100)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Speedy Gonzalvez', 100)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Worm</b></td>
+							<td>Booster</td>
+							<td>0</td>
+							<td>0</td>
+							<td>7</td>
+							<td>Increases all Backdoor Checks you make by +2 as long as this
+								Program remains Rezzed.
+							</td>
+							<td>
+								A golden mechanical worm with neon green eyes
+							</td>
+							<td>50 eb (Costly)</td>
+							<td>
+								<button onclick="purchase('Worm', 50)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Worm', 50)">-</button>
+							</td>
+						</tr>
 					</table>
 
 					<h4>DEFENDERS</h4>
@@ -5776,6 +5835,50 @@
 								<button onclick="sell('Armor', 50)">-</button>
 							</td>
 						</tr>
+						<tr>
+							<td><b>Flak</b></td>
+							<td>Defender</td>
+							<td>0</td>
+							<td>0</td>
+							<td>7</td>
+							<td>Reduces the ATK of all Non-Black ICE Attacker Programs run against
+								you to 0 as long as this Program remains Rezzed. Only 1 copy of this
+								Program can be running at a time. Each copy of this Program can
+								only be used once per Netrun.
+							</td>
+							<td>
+								A cloud of blinding, glowing, multi-colored lights swirling around the Netrunner
+							</td>
+							<td>50 eb (Costly)</td>
+							<td>
+								<button onclick="purchase('Flak', 50)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Flak', 50)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Shield</b></td>
+							<td>Defender</td>
+							<td>0</td>
+							<td>0</td>
+							<td>7</td>
+							<td>Stops the first successful Non-Black ICE Program Effect from dealing
+								brain damage. After stopping this damage, the Shield Derezzes itself.
+								Only 1 copy of this Program can be running at a time. Each copy of
+								this Program can only be used once per Netrun.
+							</td>
+							<td>
+								Flickering silver energy barrier surrounding the Netrunner
+							</td>
+							<td>20 eb (Everyday)</td>
+							<td>
+								<button onclick="purchase('Shield', 50)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Shield', 50)">-</button>
+							</td>
+						</tr>
 					</table>
 
 					<h4>ATTACKERS</h4>
@@ -5811,6 +5914,154 @@
 							</td>
 							<td>
 								<button onclick="sell('Banhammer', 50)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Sword</b></td>
+							<td>Anti-Program Attacker</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>Does 3d6 REZ to a Black ICE Program, or 2d6 REZ to a Non-Black
+								ICE Program.
+							</td>
+							<td>
+								Glowing energy katana appearing from the Netrunner's hand
+							</td>
+							<td>50 eb (Costly)</td>
+							<td>
+								<button onclick="purchase('Sword', 50)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Sword', 50)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>DeckKRASH</b></td>
+							<td>Anti-Personnel Attacker</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>Enemy Netrunner is forcibly and unsafely Jacked Out of the
+								Architecture, suffering the effect of all Rezzed enemy Black
+								ICE they've encountered in the Architecture as they leave.
+							</td>
+							<td>
+								Cartoon stick of dynamite thrown by the Netrunner
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>
+								<button onclick="purchase('DeckKRASH', 100)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('DeckKRASH', 100)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Hellbolt</b></td>
+							<td>Anti-Personnel Attacker</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>Does 2d6 Damage direct to the enemy Netrunner's brain. Unless
+								insulated, their Cyberdeck catches fire along with their clothing.
+								Until they spend a Meat Action to put themselves out, they take
+								2 damage to their HP whenever they end their Turn. Multiple
+								instances of this effect cannot stack.
+							</td>
+							<td>
+								Bolt of crimson fire launched from the Netrunner's hand
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>
+								<button onclick="purchase('Hellbolt', 100)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Hellbolt', 100)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Nervescrub</b></td>
+							<td>Anti-Personnel Attacker</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>Enemy Netrunner's INT, REF, and DEX are each lowered by 1d6 for
+								the next hour (minimum 1). The effects are largely psychosomatic
+								and leave no permanent effects.
+							</td>
+							<td>
+								Chrome ball thrown by the Netrunner that sparks with electricity
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>
+								<button onclick="purchase('Nervescrub', 100)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Nervescrub', 100)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Poison Flatline</b></td>
+							<td>Anti-Personnel Attacker</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>Destroys a single Non-Black ICE Program installed on the
+								Netrunner target's Cyberdeck at random.
+							</td>
+							<td>
+								Beam of neon green light shot from the Netrunner's finger
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>
+								<button onclick="purchase('Poison Flatline', 100)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Poison Flatline', 100)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Superglue</b></td>
+							<td>Anti-Personnel Attacker</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>Enemy Netrunner cannot progress deeper into the Architecture or
+								Jack Out safely for 1d6 Rounds (enemy Netrunner can still
+								perform an unsafe Jack Out, though). Each copy of this Program
+								can only be used once per Netrun.
+							</td>
+							<td>
+								A mass of sticky red goop fired from the Netrunner's hand
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>
+								<button onclick="purchase('Superglue', 100)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Superglue', 100)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Vrizzbolt</b></td>
+							<td>Anti-Personnel Attacker</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>Does 1d6 Damage direct to a Netrunner's brain and lowers the
+								amount of total NET Actions the Netrunner can accomplish on
+								their next Turn by 1 (minimum 2).
+							</td>
+							<td>
+								A double helix comprised of flickering neon light appearing from the Netrunner's finger
+							</td>
+							<td>50 eb (Costly)</td>
+							<td>
+								<button onclick="purchase('Vrizzbolt', 50)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Vrizzbolt', 50)">-</button>
 							</td>
 						</tr>
 					</table>
@@ -5852,6 +6103,262 @@
 							</td>
 							<td>
 								<button onclick="sell('Asp', 100)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Giant</b></td>
+							<td>Anti-Personnel Black ICE</td>
+							<td>2</td>
+							<td>2</td>
+							<td>8</td>
+							<td>4</td>
+							<td>25</td>
+							<td>Does 3d6 damage direct to an enemy Netrunner's
+								brain. The Netrunner is forcibly and unsafely
+								Jacked Out of their current Netrun. They suffer
+								the effect of all Rezzed enemy Black ICE they've
+								encountered in the Architecture as they leave, not
+								including the Giant.
+							</td>
+							<td>
+								A massive pair of feet and ankles towering above the enemy Netrunner
+							</td>
+							<td>1,000 eb (V. Expensive)</td>
+							<td>
+								<button onclick="purchase('Giant', 1000)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Giant', 1000)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Hellhound</b></td>
+							<td>Anti-Personnel Black ICE</td>
+							<td>6</td>
+							<td>6</td>
+							<td>6</td>
+							<td>2</td>
+							<td>20</td>
+							<td>Does 2d6 damage direct to the Netrunner's brain.
+								Unless insulated, their Cyberdeck catches fire along
+								with their clothing. Until they spend a Meat Action
+								to put themselves out, they take 2 damage to
+								their HP whenever they end their Turn. Multiple
+								instances of this effect cannot stack.
+							</td>
+							<td>A huge, black metal wolf. Its eyes glow white and fire runs in ripples all over its body. It speaks in a grating, metallic voice,
+								repeating the enemy Netrunner's name
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>
+								<button onclick="purchase('Hellhound', 500)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Hellhound', 500)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Kraken</b></td>
+							<td>Anti-Personnel Black ICE</td>
+							<td>6</td>
+							<td>2</td>
+							<td>8</td>
+							<td>4</td>
+							<td>30</td>
+							<td>Does 3d6 damage direct to an enemy Netrunner's
+								brain. Until the end of the Netrunner's next Turn,
+								the Netrunner cannot progress deeper into the
+								Architecture or Jack Out safely (The Netrunner
+								can still perform an unsafe Jack Out).
+							</td>
+							<td>A mass of thrashing, orange tentacles protruding from the walls. Their suckers are covered in sticky red goop
+							</td>
+							<td>1,000 eb (V. Expensive)</td>
+							<td>
+								<button onclick="purchase('Kraken', 1000)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Kraken', 1000)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Liche</b></td>
+							<td>Anti-Personnel Black ICE</td>
+							<td>8</td>
+							<td>2</td>
+							<td>6</td>
+							<td>2</td>
+							<td>25</td>
+							<td>Enemy Netrunner's INT, REF, and DEX are each
+								lowered by 1d6 for the next hour (minimum 1).
+								The effects are largely psychosomatic and leave
+								no permanent effects.
+							</td>
+							<td>Metallic skeleton draped in black robes. Its hands are studded with blackened rings that spark with electricity.
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>
+								<button onclick="purchase('Liche', 500)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Liche', 500)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Raven</b></td>
+							<td>Anti-Personnel Black ICE</td>
+							<td>6</td>
+							<td>4</td>
+							<td>4</td>
+							<td>2</td>
+							<td>15</td>
+							<td>Derezzes a single Defender Program the enemy
+								Netrunner has Rezzed at random, then deals 1d6
+								damage direct to the Netrunner's brain.
+							</td>
+							<td>Raven adorned in plate armor wielding a glowing white lance.
+							</td>
+							<td>50 eb (Costly)</td>
+							<td>
+								<button onclick="purchase('Raven', 50)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Raven', 50)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Scorpion</b></td>
+							<td>Anti-Personnel Black ICE</td>
+							<td>2</td>
+							<td>6</td>
+							<td>2</td>
+							<td>2</td>
+							<td>15</td>
+							<td>Enemy Netrunner's MOVE is lowered by 1d6 for
+								the next hour (minimum 1). The effects are largely
+								psychosomatic and leave no permanent effects.
+							</td>
+							<td>Raven adorned in plate armor wielding a glowing white lance
+							</td>
+							<td>100 eb (Premium)</td>
+							<td>
+								<button onclick="purchase('Scorpion', 100)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Scorpion', 100)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Skunk</b></td>
+							<td>Anti-Personnel Black ICE</td>
+							<td>2</td>
+							<td>4</td>
+							<td>4</td>
+							<td>2</td>
+							<td>10</td>
+							<td>Until this Program is Derezzed, an enemy
+								Netrunner hit by this Effect makes all Slide Checks
+								at a -2. Each Skunk Black ICE can only affect
+								a single Netrunner at a time, but the effects of
+								multiple Skunks can stack.
+							</td>
+							<td>Cartoon skunk that walks on its hind legs, following the Netrunner much too closely
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>
+								<button onclick="purchase('Skunk', 500)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Skunk', 500)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Wisp</b></td>
+							<td>Anti-Personnel Black ICE</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>2</td>
+							<td>15</td>
+							<td>Does 1d6 damage direct to the enemy Netrunner's
+								brain and lowers the amount of total NET Actions
+								the Netrunner can accomplish on their next Turn
+								by 1 (minimum 2).
+							</td>
+							<td>Orb of light with a single minuscule eye crackling with energy
+							</td>
+							<td>50 eb (Costly)</td>
+							<td>
+								<button onclick="purchase('Wisp', 50)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Wisp', 50)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Dragon</b></td>
+							<td>Anti-Program Black ICE</td>
+							<td>6</td>
+							<td>4</td>
+							<td>6</td>
+							<td>6</td>
+							<td>30</td>
+							<td>Deals 6d6 damage to a Program. If this damage
+								would be enough to Derezz the Program, it is
+								instead Destroyed.
+							</td>
+							<td>Golden-scaled dragon robot wreathed in electrical discharges
+							</td>
+							<td>1,000 eb (V. Expensive)</td>
+							<td>
+								<button onclick="purchase('Dragon', 1000)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Dragon', 1000)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Killer</b></td>
+							<td>Anti-Program Black ICE</td>
+							<td>4</td>
+							<td>8</td>
+							<td>6</td>
+							<td>2</td>
+							<td>20</td>
+							<td>Deals 4d6 damage to a Program. If this damage
+								would be enough to Derezz the Program, it is
+								instead Destroyed.
+							</td>
+							<td>Robotic samurai with red eyes wielding a glowing katana
+							</td>
+							<td>500 eb (Expensive)</td>
+							<td>
+								<button onclick="purchase('Killer', 500)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Killer', 500)">-</button>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Sabertooth</b></td>
+							<td>Anti-Program Black ICE</td>
+							<td>8</td>
+							<td>6</td>
+							<td>6</td>
+							<td>2</td>
+							<td>25</td>
+							<td>Deals 6d6 damage to a Program. If this damage
+								would be enough to Derezz the Program, it is
+								instead Destroyed.
+							</td>
+							<td>Immense hulking cat with glowing white tusks
+							</td>
+							<td>1,000 eb (V. Expensive)</td>
+							<td>
+								<button onclick="purchase('Sabertooth', 1000)">+</button>
+							</td>
+							<td>
+								<button onclick="sell('Sabertooth', 1000)">-</button>
 							</td>
 						</tr>
 					</table>
