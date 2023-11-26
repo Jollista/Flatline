@@ -205,7 +205,7 @@ function decrementSkill(skillName)
 	var rank = skills.get(skillName);
 
 	//if decrementing past floor
-	if (rank == 0 || (rank == 2 && isRequired(skillName)))
+	if (rank == 0 || rank == undefined || (rank == 2 && isRequired(skillName)))
 	{
 		console.log("Skill cannot go lower");
 		return;
